@@ -9,24 +9,16 @@ public class NPCFollow : MonoBehaviour
 
     void Update()
     {
-        // Look at the player
         transform.LookAt(player.transform);
-
-        // Calculate the direction to the player
         Vector3 directionToPlayer = (player.transform.position - transform.position).normalized;
         float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
-
-        // Draw the ray for debugging purposes
-        Debug.DrawRay(transform.position, directionToPlayer * distanceToPlayer, Color.red);
-
-        // Perform the raycast
+        //Debug.DrawRay(transform.position, directionToPlayer * distanceToPlayer, Color.red);
         if (Physics.Raycast(transform.position, directionToPlayer, out shot, distanceToPlayer))
         {
             Debug.Log("Raycast hit: " + shot.collider.name + " at distance: " + shot.distance);
 
             if (shot.distance >= AllowDistance)
             {
-                // Move towards the player
                 transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
                 Debug.Log("Moving towards player");
             }
