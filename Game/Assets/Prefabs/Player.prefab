@@ -153,6 +153,8 @@ GameObject:
   - component: {fileID: 8191683450191994040}
   - component: {fileID: 1221280837735371922}
   - component: {fileID: 917162032073257265}
+  - component: {fileID: 1268926601011197855}
+  - component: {fileID: 126837967885912162}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -318,3 +320,32 @@ MonoBehaviour:
   cam: {fileID: 5122418930328566297}
   xSensitivity: 30
   ySensitivity: 30
+--- !u!114 &1268926601011197855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7328439366503577375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c5bd7d68894b3a42b4bca3caa46b3ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactDistance: 3
+  mask:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!114 &126837967885912162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7328439366503577375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 295e6bed346797749bdd7386060ef398, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptText: {fileID: 0}

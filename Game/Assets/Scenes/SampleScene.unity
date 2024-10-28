@@ -380,35 +380,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 830516840}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &473257073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 473257072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c5bd7d68894b3a42b4bca3caa46b3ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactDistance: 3
-  mask:
-    serializedVersion: 2
-    m_Bits: 64
---- !u!114 &473257082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 473257072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 295e6bed346797749bdd7386060ef398, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptText: {fileID: 1661003209}
 --- !u!1 &517182881
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,12 +455,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 517182881}
   m_CullTransparentMesh: 1
---- !u!1 &690999809 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8539287034008672480, guid: dba61418826eebf4894f28a6dc68db67,
-    type: 3}
-  m_PrefabInstance: {fileID: 1449088965}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &830516840
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -498,6 +463,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 126837967885912162, guid: 6d7facbfde2f9354fa692b22e003bebe,
+        type: 3}
+      propertyPath: promptText
+      value: 
+      objectReference: {fileID: 1661003209}
     - target: {fileID: 735773697138713288, guid: 6d7facbfde2f9354fa692b22e003bebe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -556,15 +526,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7328439366503577375, guid: 6d7facbfde2f9354fa692b22e003bebe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 473257073}
-    - targetCorrespondingSourceObject: {fileID: 7328439366503577375, guid: 6d7facbfde2f9354fa692b22e003bebe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 473257082}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d7facbfde2f9354fa692b22e003bebe, type: 3}
 --- !u!1 &980188937
 GameObject:
@@ -628,26 +590,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1737081791}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1135554770 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2583714041964030904, guid: dba61418826eebf4894f28a6dc68db67,
-    type: 3}
-  m_PrefabInstance: {fileID: 1449088965}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1135554775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1135554770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43c6563026b567b4ab16e5907a143d09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptMessage: Use Keypad
-  door: {fileID: 690999809}
 --- !u!1001 &1449088965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -716,6 +658,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room
       objectReference: {fileID: 0}
+    - target: {fileID: 6356698081515871090, guid: dba61418826eebf4894f28a6dc68db67,
+        type: 3}
+      propertyPath: useEvents
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8407662194638439505, guid: dba61418826eebf4894f28a6dc68db67,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -724,11 +671,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2583714041964030904, guid: dba61418826eebf4894f28a6dc68db67,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1135554775}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dba61418826eebf4894f28a6dc68db67, type: 3}
 --- !u!1 &1661003207
 GameObject:
@@ -787,7 +730,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: '[Prompt]'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
