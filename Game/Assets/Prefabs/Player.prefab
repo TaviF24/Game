@@ -153,12 +153,9 @@ GameObject:
   - component: {fileID: 8191683450191994040}
   - component: {fileID: 1221280837735371922}
   - component: {fileID: 917162032073257265}
-<<<<<<< Updated upstream
-=======
   - component: {fileID: 1268926601011197855}
   - component: {fileID: 126837967885912162}
   - component: {fileID: 8900405580405040291}
->>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -324,8 +321,6 @@ MonoBehaviour:
   cam: {fileID: 5122418930328566297}
   xSensitivity: 30
   ySensitivity: 30
-<<<<<<< Updated upstream
-=======
 --- !u!114 &1268926601011197855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,4 +366,3 @@ MonoBehaviour:
   chipSpeed: 2
   frontHealthBar: {fileID: 0}
   backHealthBar: {fileID: 0}
->>>>>>> Stashed changes
