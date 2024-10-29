@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,39 +6,55 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    private float health;
-    private float lerpTimer;
-    public float maxHealth = 100f;
+    private float health; // current health
+	private float lerpTimer; 
+	[Header("Health Bar")]
+    public float maxHealth = 100f; 
 	// controls how fast the delayed bar takes to reach the current health
 	public float chipSpeed = 2f;
     public Image frontHealthBar;
 	public Image backHealthBar;
 
+	[Header("Damage Effects")]
+	public Image overlay;
+	public float duration; // how long the overlay stays fully opaque
+	public float fadeSpeed = 1.5f; // how fast the overlay fades out
+	private float durationTimer;
+
 	// Start is called before the first frame update
 	void Start()
     {
 		health = maxHealth;
+		overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 0f);
 	}
 
-    // Update is called once per frame
-    void Update()
-    {
+	// Update is called once per frame
+	void Update()
+	{
 		health = Mathf.Clamp(health, 0, maxHealth);
 		UpdateHealthUI();
-		if (Input.GetKeyUp(KeyCode.T))
+
+		if (overlay.color.a > 0)
 		{
-			TakeDamage(10);
-		}
-		if (Input.GetKeyUp(KeyCode.G))
-		{
-			RestoreHealth(10);
+			// don't fade out the overlay if the player is low on health
+			if (health < 30)
+				return;
+
+			durationTimer += Time.deltaTime;
+
+			if (durationTimer > duration)
+			{
+				// fade out the overlay
+				float tempAlpha = overlay.color.a;
+				tempAlpha -= Time.deltaTime * fadeSpeed;
+				fadeSpeed += Time.deltaTime * 1.1f;
+				overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, tempAlpha);
+			}
 		}
 	}
 
 	public void UpdateHealthUI()
 	{       
-		Debug.Log("Health: " + health);
-
 		float fillFront = frontHealthBar.fillAmount;
 		float fillBack = backHealthBar.fillAmount;
 
@@ -69,6 +86,9 @@ public class PlayerHealth : MonoBehaviour
 		health -= damage;
 		lerpTimer = 0;
 		UpdateHealthUI();
+		durationTimer = 0;
+		fadeSpeed = 1.5f;
+		overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 1);
 	}
 
 	public void RestoreHealth(float healAmount)
