@@ -919,6 +919,16 @@ PrefabInstance:
       propertyPath: path
       value: 
       objectReference: {fileID: 1737081790}
+    - target: {fileID: 5746246374333031168, guid: 8e59e2d8271e7174ca3ed727aa865fed,
+        type: 3}
+      propertyPath: eyeHeight
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6838619699633545808, guid: 8e59e2d8271e7174ca3ed727aa865fed,
+        type: 3}
+      propertyPath: m_Speed
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
