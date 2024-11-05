@@ -10,6 +10,7 @@ public class InputManager : MonoBehaviour
 
     private PlayerMotor motor;
     private PlayerLook look;
+    private PlayerShoot shoot;
 
     void Awake()
     {
@@ -17,13 +18,16 @@ public class InputManager : MonoBehaviour
         onFoot = playerInput.OnFoot;
         motor = GetComponent<PlayerMotor>();
         look = GetComponent<PlayerLook>();
+        shoot = GetComponent<PlayerShoot>();
 
         onFoot.Jump.performed += ctx => motor.Jump(); // anytime when onFoot.Jump is performed, we use a callback context(ctx) to call out the motor.Jump function
         //all actions have 3 states: performed, started, canceled
         
         onFoot.Sprint.performed += ctx => motor.Sprint();
         onFoot.Crouch.performed += ctx => motor.Crouch();
+        onFoot.Shoot.performed += ctx => shoot.Shoot();
     }
+
     void FixedUpdate()
     {
         //tell the playermotor to move using the value from our movement action
