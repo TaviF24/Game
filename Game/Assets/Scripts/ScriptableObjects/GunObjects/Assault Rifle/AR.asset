@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Assault Rifle
   damage: 22
-  maxDistance: 200
-  currentAmo: 31
-  magSize: 31
+  maxDistance: 300
+  currentAmo: 32
+  magSize: 32
   fireRate: 600
   reloadTime: 1.5
   reloading: 0

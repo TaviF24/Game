@@ -12,12 +12,14 @@ public class Gun : MonoBehaviour
     float timeSinceLastShot;
     Camera camera;
     GameObject player;
+    Vector3 shotDirection;
    
     
-    private void Awake()
+    private void Start()
     {
         player = GameManager.Instance.player;
         camera = (Camera)GameObject.FindObjectOfType(typeof(Camera));
+        
     }
 
     private void Update()
@@ -50,16 +52,21 @@ public class Gun : MonoBehaviour
                 angles.z
                 );
 
-            Vector3 shotDirection = (imaginaryTarget.transform.position - player.transform.position).normalized;
-
-            newBullet.GetComponent<Rigidbody>().velocity = shotDirection * 20;            
-            
-
-
-            if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, gunData.maxDistance))
-            {
-                //Debug.Log(hitInfo.transform.name);
+            Ray ray = new Ray(camera.transform.position, camera.transform.forward);
+            Debug.DrawRay(ray.origin, ray.direction * gunData.maxDistance, Color.blue);
+            if (Physics.Raycast(ray, out RaycastHit hitInfo, gunData.maxDistance))
+            {   
+                Debug.Log(hitInfo.point);
+                Debug.Log(hitInfo.transform.name);
+                shotDirection = (hitInfo.point - gunBarrel.transform.position).normalized;
             }
+            else
+            {
+                shotDirection = (imaginaryTarget.transform.position - gunBarrel.transform.position).normalized;
+            }
+
+            newBullet.GetComponent<Rigidbody>().velocity = shotDirection * 80;            
+        
             gunData.currentAmo--;
             timeSinceLastShot=0f;
         }

@@ -25,13 +25,14 @@ public class InputManager : MonoBehaviour
         
         onFoot.Sprint.performed += ctx => motor.Sprint();
         onFoot.Crouch.performed += ctx => motor.Crouch();
-        onFoot.Shoot.performed += ctx => shoot.Shoot();
+        
     }
 
     void FixedUpdate()
     {
         //tell the playermotor to move using the value from our movement action
         motor.ProcessMove(onFoot.Movement.ReadValue<Vector2>());
+        onFoot.Shoot.performed += ctx => shoot.Shoot();
     }
 
     void LateUpdate()
