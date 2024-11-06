@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,7 +18,7 @@ public class Gun : MonoBehaviour
     
     private void Start()
     {
-        player = GameManager.Instance.player;
+        player = GameManager.instance.player;
         camera = (Camera)GameObject.FindObjectOfType(typeof(Camera));
         
     }
@@ -26,6 +27,7 @@ public class Gun : MonoBehaviour
     {
         timeSinceLastShot += Time.deltaTime;
         //Debug.Log(camera.transform.rotation.eulerAngles);
+        Debug.Log(DateTime.Now);
     }
 
     private bool CanShoot()
@@ -42,33 +44,43 @@ public class Gun : MonoBehaviour
     {
         if (CanShoot())
         {
-            GameObject newBullet = GameObject.Instantiate(bullet, gunBarrel.position, player.transform.rotation);
-            
-            // change the bullet orientation
-            Vector3 angles = newBullet.transform.eulerAngles;
-            newBullet.transform.eulerAngles = new Vector3 (
-                angles.x += camera.transform.eulerAngles.x + 90,
-                angles.y,
-                angles.z
-                );
+            GameObject newBullet = ObjectPool.instance.getFreeObject();
 
-            Ray ray = new Ray(camera.transform.position, camera.transform.forward);
-            Debug.DrawRay(ray.origin, ray.direction * gunData.maxDistance, Color.blue);
-            if (Physics.Raycast(ray, out RaycastHit hitInfo, gunData.maxDistance))
-            {   
-                Debug.Log(hitInfo.point);
-                Debug.Log(hitInfo.transform.name);
-                shotDirection = (hitInfo.point - gunBarrel.transform.position).normalized;
-            }
-            else
+
+            //GameObject newBullet = GameObject.Instantiate(bullet, gunBarrel.position, player.transform.rotation);
+
+            if(newBullet != null) 
             {
-                shotDirection = (imaginaryTarget.transform.position - gunBarrel.transform.position).normalized;
-            }
+                newBullet.transform.position = gunBarrel.position;
+                newBullet.transform.rotation = player.transform.rotation;
+                newBullet.SetActive(true);
 
-            newBullet.GetComponent<Rigidbody>().velocity = shotDirection * 80;            
-        
-            gunData.currentAmo--;
-            timeSinceLastShot=0f;
+                // change the bullet orientation
+                Vector3 angles = newBullet.transform.eulerAngles;
+                newBullet.transform.eulerAngles = new Vector3(
+                    angles.x += camera.transform.eulerAngles.x + 90,
+                    angles.y,
+                    angles.z
+                    );
+
+                Ray ray = new Ray(camera.transform.position, camera.transform.forward);
+                Debug.DrawRay(ray.origin, ray.direction * gunData.maxDistance, Color.blue);
+                if (Physics.Raycast(ray, out RaycastHit hitInfo, gunData.maxDistance))
+                {
+                    //Debug.Log(hitInfo.transform.name);
+                    shotDirection = (hitInfo.point - gunBarrel.transform.position).normalized;
+                }
+                else
+                {
+                    shotDirection = (imaginaryTarget.transform.position - gunBarrel.transform.position).normalized;
+                }
+
+                newBullet.GetComponent<Rigidbody>().velocity = shotDirection * 80;
+
+                gunData.currentAmo--;
+                timeSinceLastShot = 0f;
+            }
+            
         }
 
     }
