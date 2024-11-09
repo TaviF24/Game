@@ -957,6 +957,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyFollow
       objectReference: {fileID: 0}
+    - target: {fileID: 7394731215340880989, guid: 4f8e04532bcad2f42ac01f0613aad12f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

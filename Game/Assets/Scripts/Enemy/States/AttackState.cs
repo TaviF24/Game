@@ -7,6 +7,8 @@ public class AttackState : BaseState
     private float moveTimer;
     private float losePlayerTimer;
     private float shotTimer;
+
+    ObjectPool objectPool;
     public override void Enter()
     {
         
@@ -46,24 +48,18 @@ public class AttackState : BaseState
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void Shoot()
     {
+        objectPool = gameObject.GetComponent<ObjectPool>();
+
         //store ref to gun barrel
         Transform gunbarrel = enemy.gunBarrel;
         //new bullet
-        GameObject bullet = GameObject.Instantiate(Resources.Load("Prefabs/Bullet") as GameObject, gunbarrel.position, enemy.transform.rotation);
+        GameObject bullet = objectPool.getFreeObject();
+        bullet.transform.position = gunbarrel.position;
+        bullet.transform.rotation = enemy.transform.rotation;
+        bullet.SetActive(true);
+        //GameObject bullet = GameObject.Instantiate(Resources.Load("Prefabs/Bullet") as GameObject, gunbarrel.position, enemy.transform.rotation);
         //compute direction
         Vector3 shotDirection=(enemy.Player.transform.position-gunbarrel.transform.position).normalized;
         //add force

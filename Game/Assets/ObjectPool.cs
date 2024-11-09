@@ -3,19 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
-{
-    public static ObjectPool instance;
-    
+{   
     private List<GameObject> poolObjects = new List<GameObject>();
     public int size = 1;
 
     [SerializeField] GameObject objectFromPool;
-
-    // Start is called before the first frame update
-    void Awake()
-    {
-        instance = this;
-    }
 
     private void Start()
     {

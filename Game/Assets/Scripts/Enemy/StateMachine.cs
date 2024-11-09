@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class StateMachine : MonoBehaviour
 {
-    public BaseState activeState;
+    
+    public BaseState activeState = new PatrolState();
    
 
     public void Initialize()
@@ -16,7 +17,7 @@ public class StateMachine : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        activeState.SetGameObject(gameObject);
     }
 
     // Update is called once per frame

@@ -9,6 +9,7 @@ public class Gun : MonoBehaviour
     [SerializeField] Transform gunBarrel;
     [SerializeField] Transform imaginaryTarget;
     [SerializeField] GameObject bullet;
+    [SerializeField] ObjectPool objectPool;
 
     float timeSinceLastShot;
     Camera camera;
@@ -27,7 +28,7 @@ public class Gun : MonoBehaviour
     {
         timeSinceLastShot += Time.deltaTime;
         //Debug.Log(camera.transform.rotation.eulerAngles);
-        Debug.Log(DateTime.Now);
+        //Debug.Log(DateTime.Now);
     }
 
     private bool CanShoot()
@@ -44,7 +45,7 @@ public class Gun : MonoBehaviour
     {
         if (CanShoot())
         {
-            GameObject newBullet = ObjectPool.instance.getFreeObject();
+            GameObject newBullet = objectPool.getFreeObject();
 
 
             //GameObject newBullet = GameObject.Instantiate(bullet, gunBarrel.position, player.transform.rotation);

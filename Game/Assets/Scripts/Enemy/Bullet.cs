@@ -4,17 +4,55 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
-    {
-        Transform hitTransform = collision.transform;
-        if(hitTransform.CompareTag("Player"))
-        {
-            Debug.Log("Hit Player");
-            hitTransform.GetComponent<PlayerHealth>().TakeDamage(10);
-        }
-        Debug.Log(hitTransform.name);
+    [SerializeField] GunData weaponThatIsUsingMe;
 
-        //Destroy(gameObject);
-        gameObject.SetActive(false);
+    Vector3 prevPos;
+
+    private void Start()
+    {
+        prevPos = transform.position;
     }
+
+    private void Update()
+    {
+
+        Vector3 direction = (transform.position - prevPos).normalized;
+        float distance = (transform.position - prevPos).magnitude;
+
+        RaycastHit hit;
+        if(Physics.Raycast(prevPos, direction, out hit, distance))
+        {
+            IDamageable component = hit.collider.gameObject.GetComponent<IDamageable>();
+            if (component != null)
+            {
+                component.TakeDamage(weaponThatIsUsingMe.damage);
+            }
+            gameObject.SetActive(false);
+        }
+        
+        /*  //This can be used if we want to shoot through different layers (doors, windows, walls, etc.)
+        RaycastHit[] hits = Physics.RaycastAll(new Ray(prevPos, direction), distance);
+
+        for (int i = 0; i < hits.Length; i++) 
+        {
+            Debug.Log (hits.Length + " loveste " + hits[i].collider.gameObject.name);
+        }
+        */
+
+        prevPos = transform.position;
+    }
+
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    Transform hitTransform = collision.transform;
+    //    if(hitTransform.CompareTag("Player"))
+    //    {
+    //        Debug.Log("Hit Player");
+    //        hitTransform.GetComponent<PlayerHealth>().TakeDamage(10);
+    //    }
+    //    //Debug.Log(hitTransform.name);
+
+    //    //Destroy(gameObject);
+    //    //gameObject.SetActive(false);
+    //}
 }
