@@ -10,4 +10,9 @@ public class PlayerShoot : MonoBehaviour
     {
         gun.Shoot();
     }
+
+    public void Reload()
+    {
+        gun.StartReload();
+    }
 }

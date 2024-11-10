@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour, IDamageable
 {
-    private float health; // current health
-	private float lerpTimer; 
+    private static float health;
+    private float lerpTimer; 
 	[Header("Health Bar")]
     public float maxHealth = 100f; 
 	// controls how fast the delayed bar takes to reach the current health
@@ -24,7 +24,10 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 	// Start is called before the first frame update
 	void Start()
     {
-		health = maxHealth;
+        if (health <= 0) // Initialize only if health has not been set
+        {
+            health = maxHealth;
+        }
 		overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 0f);
 	}
 

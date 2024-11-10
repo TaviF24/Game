@@ -16,9 +16,13 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     
     public void TakeDamage(float damage)
     {
-        if(health > 0) 
+        if(health >= damage) 
         { 
             health -= damage;
+        }
+        else
+        {
+            health = 0;
         }
         
         Component[] components = gameObject.GetComponents<Component>();
@@ -26,8 +30,9 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         {
             Debug.Log(components[i].name);
         }
-      
-        gameObject.GetComponent<Renderer>().material.color = new Color(Random.Range(1,255), 0, 0);
+
+        Color randomColor = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
+        gameObject.GetComponent<Renderer>().material.color = randomColor;
 
         Debug.Log("Enemy hit: " +  health + "HP");
     }

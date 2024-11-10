@@ -21,6 +21,15 @@ public class Gun : MonoBehaviour
     {
         player = GameManager.instance.player;
         camera = (Camera)GameObject.FindObjectOfType(typeof(Camera));
+        if (gunData.reloading)
+        {
+            gunData.reloading = false;
+            
+        }
+        if(gunData.currentAmo == 0)
+        {
+            StartReload();
+        }
         
     }
 
@@ -80,10 +89,32 @@ public class Gun : MonoBehaviour
 
                 gunData.currentAmo--;
                 timeSinceLastShot = 0f;
+
+                if(gunData.currentAmo == 0)
+                {
+                    StartReload();
+                }
             }
             
         }
 
+    }
+
+    public void StartReload()
+    {
+        if (!gunData.reloading && gunData.currentAmo != gunData.magSize)
+        {
+            StartCoroutine(Reload());
+        }
+    }
+    
+    private IEnumerator Reload()
+    {
+        gunData.reloading = true;
+        Debug.Log("is reloading...");
+        yield return new WaitForSeconds(gunData.reloadTime);
+        gunData.currentAmo = gunData.magSize;
+        gunData.reloading = false;
     }
 
 }
