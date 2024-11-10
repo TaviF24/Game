@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour, IDamageable
 {
-    private static float health;
+    private static float health = 100f;
     private float lerpTimer; 
 	[Header("Health Bar")]
     public float maxHealth = 100f; 
@@ -24,7 +24,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 	// Start is called before the first frame update
 	void Start()
     {
-        if (health <= 0) // Initialize only if health has not been set
+        if (health < 0) // Initialize only if health has not been set
         {
             health = maxHealth;
         }
