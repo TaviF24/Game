@@ -4,14 +4,41 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    [SerializeField] GunData weaponThatIsUsingMe;
+
+    Vector3 prevPos;
+
+    private void Start()
     {
-        Transform hitTransform = collision.transform;
-        if(hitTransform.CompareTag("Player"))
+        prevPos = transform.position;
+    }
+
+    private void Update()
+    {
+
+        Vector3 direction = (transform.position - prevPos).normalized;
+        float distance = (transform.position - prevPos).magnitude;
+
+        RaycastHit hit;
+        if(Physics.Raycast(prevPos, direction, out hit, distance))
         {
-            Debug.Log("Hit Player");
-            hitTransform.GetComponent<PlayerHealth>().TakeDamage(10);
+            IDamageable component = hit.collider.gameObject.GetComponent<IDamageable>();
+            if (component != null)
+            {
+                component.TakeDamage(weaponThatIsUsingMe.damage);
+            }
+            gameObject.SetActive(false);
         }
-        Destroy(gameObject);
+        
+        /*  //This can be used if we want to shoot through different layers (doors, windows, walls, etc.)
+        RaycastHit[] hits = Physics.RaycastAll(new Ray(prevPos, direction), distance);
+
+        for (int i = 0; i < hits.Length; i++) 
+        {
+            Debug.Log (hits.Length + " loveste " + hits[i].collider.gameObject.name);
+        }
+        */
+
+        prevPos = transform.position;
     }
 }

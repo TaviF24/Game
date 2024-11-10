@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/BankFloor0.unity
+    guid: b33770549ce5cfb4981593d41a0dac3b
+  - enabled: 1
+    path: Assets/Scenes/BankFloor1.unity
+    guid: 8216f0e207db3874ab36b8b660203439
+  - enabled: 1
+    path: Assets/Scenes/BankFloor2.unity
+    guid: cd9a7a706cad93441889a32a2d61adc0
   m_configObjects: {}
