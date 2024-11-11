@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BankFloor2.unity
     guid: cd9a7a706cad93441889a32a2d61adc0
+  - enabled: 1
+    path: Assets/AssetStore/Demo City By Versatile Studio/Scenes/demo_city_night.unity
+    guid: 3dd6985d248a2724291b46a30456112a
   m_configObjects: {}

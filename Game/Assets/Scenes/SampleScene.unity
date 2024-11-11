@@ -784,6 +784,11 @@ PrefabInstance:
       propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 473257073}
+    - target: {fileID: 3552217903888436397, guid: dba61418826eebf4894f28a6dc68db67,
+        type: 3}
+      propertyPath: sceneName
+      value: demo_city_night
+      objectReference: {fileID: 0}
     - target: {fileID: 5877231840198638745, guid: dba61418826eebf4894f28a6dc68db67,
         type: 3}
       propertyPath: m_LocalPosition.x
