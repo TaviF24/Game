@@ -10,13 +10,14 @@ public class Gun : MonoBehaviour
     [SerializeField] Transform imaginaryTarget;
     [SerializeField] GameObject bullet;
     [SerializeField] ObjectPool objectPool;
+    [SerializeField] GameObject weapon;
+    [SerializeField] GameObject mag;
 
     float timeSinceLastShot;
     Camera camera;
     GameObject player;
     Vector3 shotDirection;
    
-    
     private void Start()
     {
         player = GameManager.instance.player;
@@ -105,6 +106,8 @@ public class Gun : MonoBehaviour
         if (!gunData.reloading && gunData.currentAmo != gunData.magSize)
         {
             StartCoroutine(Reload());
+            // weapon.GetComponent<Animator>().SetTrigger("Reload");
+            // mag.GetComponent<Animator>().SetTrigger("Reload");
         }
     }
     
