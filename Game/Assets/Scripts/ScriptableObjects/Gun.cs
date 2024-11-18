@@ -17,11 +17,16 @@ public class Gun : MonoBehaviour
     Camera camera;
     GameObject player;
     Vector3 shotDirection;
+    Animator weaponAnimator;
+    Animator magAnimator;
    
     private void Start()
     {
         player = GameManager.instance.player;
         camera = (Camera)GameObject.FindObjectOfType(typeof(Camera));
+        weaponAnimator = weapon.GetComponent<Animator>();
+        magAnimator = mag.GetComponent<Animator>();
+
         if (gunData.reloading)
         {
             gunData.reloading = false;
@@ -87,13 +92,15 @@ public class Gun : MonoBehaviour
                 }
 
                 newBullet.GetComponent<Rigidbody>().velocity = shotDirection * 80;
+                magAnimator.SetTrigger("Shoot");
+                weaponAnimator.SetTrigger("Shoot");
 
                 gunData.currentAmo--;
                 timeSinceLastShot = 0f;
 
-                if(gunData.currentAmo == 0)
+                if(gunData.currentAmo == 0 && !gunData.reloading)
                 {
-                    StartReload();
+                    StartCoroutine(Reload());
                 }
             }
             
@@ -106,8 +113,6 @@ public class Gun : MonoBehaviour
         if (!gunData.reloading && gunData.currentAmo != gunData.magSize)
         {
             StartCoroutine(Reload());
-            // weapon.GetComponent<Animator>().SetTrigger("Reload");
-            // mag.GetComponent<Animator>().SetTrigger("Reload");
         }
     }
     
@@ -115,6 +120,8 @@ public class Gun : MonoBehaviour
     {
         gunData.reloading = true;
         Debug.Log("is reloading...");
+        weaponAnimator.SetTrigger("Reload");
+        magAnimator.SetTrigger("Reload");
         yield return new WaitForSeconds(gunData.reloadTime);
         gunData.currentAmo = gunData.magSize;
         gunData.reloading = false;
