@@ -12,6 +12,7 @@ public class Gun : MonoBehaviour
     [SerializeField] ObjectPool objectPool;
     [SerializeField] GameObject weapon;
     [SerializeField] GameObject mag;
+    [SerializeField] ParticleSystem muzzleFlash;
 
     float timeSinceLastShot;
     Camera camera;
@@ -92,6 +93,7 @@ public class Gun : MonoBehaviour
                 }
 
                 newBullet.GetComponent<Rigidbody>().velocity = shotDirection * 80;
+                muzzleFlash.Play();
                 magAnimator.SetTrigger("Shoot");
                 weaponAnimator.SetTrigger("Shoot");
 
@@ -119,7 +121,6 @@ public class Gun : MonoBehaviour
     private IEnumerator Reload()
     {
         gunData.reloading = true;
-        Debug.Log("is reloading...");
         weaponAnimator.SetTrigger("Reload");
         magAnimator.SetTrigger("Reload");
         yield return new WaitForSeconds(gunData.reloadTime);

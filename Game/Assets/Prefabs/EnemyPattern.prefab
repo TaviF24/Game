@@ -601,6 +601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponThatIsUsingMe: {fileID: 11400000, guid: 12fdaa7e6442d7842a5bd33bf7471662,
     type: 2}
+  gunBarrelPos: {fileID: 3017171625531191357}
 --- !u!1001 &2709813776616539981
 PrefabInstance:
   m_ObjectHideFlags: 0
