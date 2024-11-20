@@ -22,7 +22,7 @@ public class Bullet : MonoBehaviour
         float distance = (transform.position - prevPos).magnitude;
 
         RaycastHit hit;
-        if(Physics.Raycast(prevPos, direction, out hit, 2f))
+        if(Physics.Raycast(prevPos, direction, out hit, distance))
         {
             IDamageable component = hit.collider.gameObject.GetComponent<IDamageable>();
             if (component != null)
