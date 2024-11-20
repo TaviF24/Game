@@ -70,7 +70,7 @@ public class Gun : MonoBehaviour
             {
                 newBullet.transform.position = gunBarrel.position;
                 newBullet.transform.rotation = player.transform.rotation;
-                newBullet.SetActive(true);
+                
 
                 // change the bullet orientation
                 Vector3 angles = newBullet.transform.eulerAngles;
@@ -91,7 +91,7 @@ public class Gun : MonoBehaviour
                 {
                     shotDirection = (imaginaryTarget.transform.position - gunBarrel.transform.position).normalized;
                 }
-
+                newBullet.SetActive(true);
                 newBullet.GetComponent<Rigidbody>().velocity = shotDirection * 80;
                 muzzleFlash.Play();
                 magAnimator.SetTrigger("Shoot");
