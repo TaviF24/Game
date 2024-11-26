@@ -13,7 +13,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     {
         health = maxHealth;
     }
-    
+
     public void TakeDamage(float damage)
     {
         if(health >= damage) 
@@ -25,11 +25,11 @@ public class EnemyHealth : MonoBehaviour, IDamageable
             health = 0;
         }
         
-        Component[] components = gameObject.GetComponents<Component>();
-        for (int i = 0; i < components.Length; i++) 
-        {
-            Debug.Log(components[i].name);
-        }
+        //Component[] components = gameObject.GetComponents<Component>();
+        //for (int i = 0; i < components.Length; i++) 
+        //{
+        //    Debug.Log(components[i].name);
+        //}
 
         Color randomColor = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
         gameObject.GetComponent<Renderer>().material.color = randomColor;

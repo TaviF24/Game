@@ -28,7 +28,16 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         {
             health = maxHealth;
         }
-		overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 0f);
+        if (health < 30)
+		{
+			overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 1f);
+		}
+		else
+		{
+            overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 0f);
+        }
+
+           
 	}
 
 	// Update is called once per frame

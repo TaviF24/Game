@@ -486,7 +486,7 @@ PrefabInstance:
     - target: {fileID: 735773697138713288, guid: 6d7facbfde2f9354fa692b22e003bebe,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 735773697138713288, guid: 6d7facbfde2f9354fa692b22e003bebe,
         type: 3}
@@ -528,14 +528,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2022275702296667626, guid: 6d7facbfde2f9354fa692b22e003bebe,
+        type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022275702296667626, guid: 6d7facbfde2f9354fa692b22e003bebe,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022275702296667626, guid: 6d7facbfde2f9354fa692b22e003bebe,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022275702296667626, guid: 6d7facbfde2f9354fa692b22e003bebe,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7328439366503577375, guid: 6d7facbfde2f9354fa692b22e003bebe,
         type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 4622435898120413719, guid: 6d7facbfde2f9354fa692b22e003bebe, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d7facbfde2f9354fa692b22e003bebe, type: 3}
@@ -779,15 +798,20 @@ PrefabInstance:
       propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 473257073}
+    - target: {fileID: 1869474955669255305, guid: dba61418826eebf4894f28a6dc68db67,
+        type: 3}
+      propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestoreHealth
+      objectReference: {fileID: 0}
     - target: {fileID: 2083729017020859836, guid: dba61418826eebf4894f28a6dc68db67,
         type: 3}
       propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 473257073}
-    - target: {fileID: 3552217903888436397, guid: dba61418826eebf4894f28a6dc68db67,
+    - target: {fileID: 2083729017020859836, guid: dba61418826eebf4894f28a6dc68db67,
         type: 3}
-      propertyPath: sceneName
-      value: demo_city_night
+      propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TakeDamage
       objectReference: {fileID: 0}
     - target: {fileID: 5877231840198638745, guid: dba61418826eebf4894f28a6dc68db67,
         type: 3}
@@ -1233,7 +1257,7 @@ PrefabInstance:
     - target: {fileID: 2745085455550037545, guid: 8e59e2d8271e7174ca3ed727aa865fed,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.05000007
+      value: -0.915
       objectReference: {fileID: 0}
     - target: {fileID: 2745085455550037545, guid: 8e59e2d8271e7174ca3ed727aa865fed,
         type: 3}

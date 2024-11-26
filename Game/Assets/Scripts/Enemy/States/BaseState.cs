@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class BaseState
 {
     public Enemy enemy;
+    public GunEnemy gunEnemy;
     public StateMachine stateMachine;
 
     public static GameObject gameObject;
