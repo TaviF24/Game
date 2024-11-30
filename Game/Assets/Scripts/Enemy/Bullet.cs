@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] GunData weaponThatIsUsingMe;
     [SerializeField] Transform gunBarrelPos;
+    [SerializeField] LayerMask layerToIgnore;
 
     Vector3 prevPos;
     bool first = true;
@@ -22,8 +23,9 @@ public class Bullet : MonoBehaviour
         float distance = (transform.position - prevPos).magnitude;
 
         RaycastHit hit;
-        if(Physics.Raycast(prevPos, direction, out hit, distance))
+        if(Physics.Raycast(prevPos, direction, out hit, distance, ~layerToIgnore))
         {
+            //Debug.Log(hit.transform.name);
             IDamageable component = hit.collider.gameObject.GetComponent<IDamageable>();
             if (component != null)
             {

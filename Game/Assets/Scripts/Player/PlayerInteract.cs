@@ -28,7 +28,7 @@ public class PlayerInteract : MonoBehaviour
 
         // raycast from the center of camera, forward
         Ray ray = new Ray(cam.transform.position, cam.transform.forward);
-        //Debug.DrawRay(ray.origin, ray.direction * interactDistance);
+        Debug.DrawRay(ray.origin, ray.direction * interactDistance);
         RaycastHit hitInfo; // store information about the object hit by the ray
         if (Physics.Raycast(ray, out hitInfo, interactDistance, mask))
         {

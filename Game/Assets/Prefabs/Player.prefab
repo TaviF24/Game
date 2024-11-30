@@ -555,6 +555,9 @@ MonoBehaviour:
   weaponThatIsUsingMe: {fileID: 11400000, guid: 12fdaa7e6442d7842a5bd33bf7471662,
     type: 2}
   gunBarrelPos: {fileID: 7809036729273463574}
+  layerToIgnore:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &3467849668294915340
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,7 +824,7 @@ GameObject:
   - component: {fileID: 520101002034020849}
   - component: {fileID: 7433522229401492569}
   - component: {fileID: 8130149003051015955}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -900,7 +903,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 8.14e-43, y: 4.53e-43, z: 0, w: 8.191188e-32}
+  m_BoundingSphereOverride: {x: 7.564175e+28, y: 0, z: 0, w: 5.733417e-39}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -1001,7 +1004,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 384
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1465,7 +1468,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 119
+    m_Bits: 375
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1506,7 +1509,7 @@ MonoBehaviour:
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 119
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
@@ -1754,7 +1757,7 @@ GameObject:
   - component: {fileID: 8000016763214513664}
   - component: {fileID: 1958225481391513115}
   - component: {fileID: 114720763346380185}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6970,7 +6973,7 @@ Transform:
   m_GameObject: {fileID: 8367228913187713707}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.037, y: 0.251, z: 0}
+  m_LocalPosition: {x: -0.0488, y: 0.3161, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6995,10 +6998,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.001
-  m_Height: 1.8
+  m_Radius: 0.0001
+  m_Height: 2
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0.27}
+  m_Center: {x: 0.009, y: 0, z: 0.3}
 --- !u!54 &6944361765948856469
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -84,10 +84,10 @@ public class Gun : MonoBehaviour
                     );
 
                 Ray ray = new Ray(camera.transform.position, camera.transform.forward);
-                Debug.DrawRay(ray.origin, ray.direction * gunData.maxDistance, Color.white);
+                Debug.DrawRay(ray.origin, ray.direction * gunData.maxDistance, Color.blue);
                 if (Physics.Raycast(ray, out RaycastHit hitInfo, gunData.maxDistance))
                 {
-                    Debug.Log(hitInfo.transform.name);
+                    //Debug.Log(hitInfo.transform.name);
                     shotDirection = (hitInfo.point - gunBarrel.transform.position).normalized;
                 }
                 else
