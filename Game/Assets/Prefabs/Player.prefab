@@ -6569,6 +6569,7 @@ GameObject:
   - component: {fileID: 126837967885912162}
   - component: {fileID: 8900405580405040291}
   - component: {fileID: 3755661751779390821}
+  - component: {fileID: 6575810103124906045}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -6747,6 +6748,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gun: {fileID: 5482974690900988230}
+--- !u!114 &6575810103124906045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7328439366503577375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d8418b0b9634b1892b0268dd9c2743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boneShape: 1
+  drawBones: 1
+  drawTripods: 0
+  boneSize: 1
+  tripodSize: 1
+  boneColor: {r: 0, g: 0, b: 1, a: 0.5}
+  m_Transforms: []
 --- !u!1 &7777559422041122012
 GameObject:
   m_ObjectHideFlags: 0
