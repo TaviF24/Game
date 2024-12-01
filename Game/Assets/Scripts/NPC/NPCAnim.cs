@@ -5,12 +5,11 @@ using UnityEngine;
 public class NPCAnim : MonoBehaviour
 {
     public GameObject weapon;
-    Animator npcAnim,weaponanim;
+    Animator npcAnim;
     // Start is called before the first frame update
     void Start()
     {
         npcAnim = GetComponent<Animator>();
-        weaponanim = weapon.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -35,7 +34,6 @@ public class NPCAnim : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.O))
         {
             npcAnim.SetTrigger("detected");
-            weaponanim.SetTrigger("detected");
             npcAnim.SetBool("still_detecting",true);
             npcAnim.SetBool("too_far",false);
             print("detected");
