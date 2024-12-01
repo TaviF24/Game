@@ -419,7 +419,7 @@ PrefabInstance:
     - target: {fileID: 6947164631041257567, guid: e72b521fd7f397145ab3b862fefade81,
         type: 3}
       propertyPath: sceneName
-      value: demo_city_night
+      value: BankOutside
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
