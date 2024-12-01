@@ -96,7 +96,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: a036388dc88472d459362174e57d1e0a,
+    type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -418,7 +419,7 @@ PrefabInstance:
     - target: {fileID: 6947164631041257567, guid: e72b521fd7f397145ab3b862fefade81,
         type: 3}
       propertyPath: sceneName
-      value: demo_city_night
+      value: BankOutside
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
