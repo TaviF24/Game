@@ -52,7 +52,8 @@ public class AttackState : BaseState
     public void Shoot()
     {
         objectPool = gameObject.GetComponent<ObjectPool>();
-
+        AudioSource shootSound = gameObject.GetComponent<AudioSource>();
+        shootSound.Play();
         //store ref to gun barrel
         Transform gunbarrel = gunEnemy.gunBarrel;
         //new bullet

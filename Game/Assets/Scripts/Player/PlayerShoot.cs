@@ -5,9 +5,12 @@ using UnityEngine;
 public class PlayerShoot : MonoBehaviour
 {
     public Gun gun;
+    
 
     public void Shoot()
     {
+        AudioSource shootSound = gameObject.GetComponent<AudioSource>();
+        shootSound.Play();
         gun.Shoot();
     }
 
