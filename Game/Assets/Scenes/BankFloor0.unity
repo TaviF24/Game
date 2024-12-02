@@ -13382,23 +13382,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6947164631041257567, guid: e72b521fd7f397145ab3b862fefade81,
-        type: 3}
-      propertyPath: sceneName
-      value: demo_city_night
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 5721166495571989906, guid: e72b521fd7f397145ab3b862fefade81, type: 3}
-    - {fileID: 2363782779697716765, guid: e72b521fd7f397145ab3b862fefade81, type: 3}
-    - {fileID: 7218395539915888427, guid: e72b521fd7f397145ab3b862fefade81, type: 3}
-    - {fileID: 8395650156668916994, guid: e72b521fd7f397145ab3b862fefade81, type: 3}
-    - {fileID: 8754112214007848115, guid: e72b521fd7f397145ab3b862fefade81, type: 3}
-    - {fileID: 65102628042081484, guid: e72b521fd7f397145ab3b862fefade81, type: 3}
-    - {fileID: 5720609730315923196, guid: e72b521fd7f397145ab3b862fefade81, type: 3}
-    - {fileID: 2038652099778537446, guid: e72b521fd7f397145ab3b862fefade81, type: 3}
-    - {fileID: 5522957438098861596, guid: e72b521fd7f397145ab3b862fefade81, type: 3}
-    - {fileID: 7569117363089846697, guid: e72b521fd7f397145ab3b862fefade81, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e72b521fd7f397145ab3b862fefade81, type: 3}
