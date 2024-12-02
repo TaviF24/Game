@@ -14,6 +14,9 @@ public class Gun : MonoBehaviour
     [SerializeField] GameObject mag;
     [SerializeField] ParticleSystem muzzleFlash;
 
+    public bool isInsideWall1 = false;
+    public bool isInsideWall2 = false;
+
     float timeSinceLastShot;
     Camera camera;
     GameObject player;
@@ -50,7 +53,7 @@ public class Gun : MonoBehaviour
     private bool CanShoot()
     {   
         //fireRate = 600 per min => 600/60 = 10 per sec => 1/10 = 0.1 s between bullets
-        if (!gunData.reloading && timeSinceLastShot > 1f / (gunData.fireRate / 60f)) 
+        if (!gunData.reloading && /*!isInsideWall &&*/ timeSinceLastShot > 1f / (gunData.fireRate / 60f)) 
         {
             return true;
         }
@@ -91,8 +94,13 @@ public class Gun : MonoBehaviour
                 {
                     shotDirection = (imaginaryTarget.transform.position - gunBarrel.transform.position).normalized;
                 }
-                newBullet.SetActive(true);
-                newBullet.GetComponent<Rigidbody>().velocity = shotDirection * 80;
+
+                if (!isInsideWall1 && !isInsideWall2)
+                {
+                    newBullet.SetActive(true);
+                    newBullet.GetComponent<Rigidbody>().velocity = shotDirection * 80;
+                }
+                
                 muzzleFlash.Play();
                 magAnimator.SetTrigger("Shoot");
                 weaponAnimator.SetTrigger("Shoot");
