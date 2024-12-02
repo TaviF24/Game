@@ -6,6 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: e8302518aa998bb4486a574602b8a8e0
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/BankFloor0.unity
+    guid: b33770549ce5cfb4981593d41a0dac3b
+  - enabled: 1
+    path: Assets/Scenes/BankFloor1.unity
+    guid: 8216f0e207db3874ab36b8b660203439
+  - enabled: 1
+    path: Assets/Scenes/BankFloor2.unity
+    guid: cd9a7a706cad93441889a32a2d61adc0
+  - enabled: 1
+    path: Assets/Scenes/BankOutside.unity
+    guid: 137dd9531e5eddc42b32f986e1e7553e
+  - enabled: 0
+    path: Assets/AssetStore/Demo City By Versatile Studio/Scenes/demo_city_night.unity
+    guid: 3dd6985d248a2724291b46a30456112a
   m_configObjects: {}
