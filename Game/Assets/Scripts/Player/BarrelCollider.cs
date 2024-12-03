@@ -11,6 +11,14 @@ public class BarrelColliding : MonoBehaviour
             GetComponentInParent<Gun>().isInsideWall1 = true;
         }
     }
+    
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.tag != "Player")
+        {
+            GetComponentInParent<Gun>().isInsideWall1 = true;
+        }
+    }
 
     private void OnCollisionExit(Collision collision)
     {
