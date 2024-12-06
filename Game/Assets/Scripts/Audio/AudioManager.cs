@@ -44,9 +44,9 @@ public class AudioManager : MonoBehaviour
 
     public AudioSourcePrefab GetFreeAudioSourceFlag()
     {
-        for (int i = 0;i < audioSourceCount; i++)
+        for (int i = 0; i < audioSourceCount; i++)
         {
-            if(!audioSources[i].audioSource.isPlaying)
+            if (!audioSources[i].audioSource.isPlaying)
             {
                 return audioSources[i];
             }

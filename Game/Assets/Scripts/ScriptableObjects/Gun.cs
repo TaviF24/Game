@@ -14,6 +14,7 @@ public class Gun : MonoBehaviour
     [SerializeField] GameObject mag;
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] AudioClip shotSound;
+    [SerializeField] AudioClip reloadSound;
 
     public bool isInsideWall1 = false;
     public bool isInsideWall2 = false;
@@ -136,6 +137,7 @@ public class Gun : MonoBehaviour
         gunData.reloading = true;
         weaponAnimator.SetTrigger("Reload");
         magAnimator.SetTrigger("Reload");
+        AudioManager.instance.Play(reloadSound);
         yield return new WaitForSeconds(gunData.reloadTime);
         gunData.currentAmo = gunData.magSize;
         gunData.reloading = false;

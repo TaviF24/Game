@@ -695,6 +695,7 @@ MonoBehaviour:
   mag: {fileID: 3305792220092811499}
   muzzleFlash: {fileID: 1958225481391513115}
   shotSound: {fileID: 8300000, guid: df24a9df3a44a1642ba9282ef21f4e5f, type: 3}
+  reloadSound: {fileID: 8300000, guid: 46bb3b7aca6a87547b40741fe8b1cfeb, type: 3}
   isInsideWall1: 0
   isInsideWall2: 0
 --- !u!82 &6238065289797285769
