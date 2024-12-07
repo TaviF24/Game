@@ -839,6 +839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c715f2392af2c404cadf7d8262e846a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetPosition: {x: 11.76, y: 0.05, z: -13.94}
   transitionAnim: {fileID: 428693122}
 --- !u!114 &935050255
 MonoBehaviour:
@@ -854,7 +855,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSourcePrefab: {fileID: 1413563155}
   audioSourceCount: 3
-  volume: 0.2
+  volume: 0.11
   audioSources: []
 --- !u!114 &935050256
 MonoBehaviour:
@@ -1404,6 +1405,21 @@ PrefabInstance:
         type: 3}
       propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TakeDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 3552217903888436397, guid: dba61418826eebf4894f28a6dc68db67,
+        type: 3}
+      propertyPath: pos.x
+      value: 83.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3552217903888436397, guid: dba61418826eebf4894f28a6dc68db67,
+        type: 3}
+      propertyPath: pos.y
+      value: 5.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3552217903888436397, guid: dba61418826eebf4894f28a6dc68db67,
+        type: 3}
+      propertyPath: pos.z
+      value: -61.4
       objectReference: {fileID: 0}
     - target: {fileID: 3552217903888436397, guid: dba61418826eebf4894f28a6dc68db67,
         type: 3}
