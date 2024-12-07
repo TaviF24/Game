@@ -11,18 +11,15 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
-        //DontDestroyOnLoad(gameObject);
-        //if (instance == null)
-        //{
-        //    instance = this;
-        //    DontDestroyOnLoad(gameObject);
-        //}
-        //else if (instance != this)
-        //{
-        //    Destroy(gameObject);
-        //    //Debug.Log("destroyed");
-        //}
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
         audioManager = GetComponent<AudioManager>();
         backgroundMusicManager = GetComponent<BackgroundMusicManager>();
         player = GameObject.FindWithTag("Player");

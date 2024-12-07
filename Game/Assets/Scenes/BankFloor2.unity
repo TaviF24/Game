@@ -12147,6 +12147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c715f2392af2c404cadf7d8262e846a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetPosition: {x: 0, y: 0, z: 0}
   transitionAnim: {fileID: 146677245}
 --- !u!114 &915165116
 MonoBehaviour:
@@ -23380,6 +23381,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944214390154162501, guid: 399327cf009946242a21f4bf05c90b98,
+        type: 3}
+      propertyPath: pos.x
+      value: -29.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944214390154162501, guid: 399327cf009946242a21f4bf05c90b98,
+        type: 3}
+      propertyPath: pos.y
+      value: 1.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944214390154162501, guid: 399327cf009946242a21f4bf05c90b98,
+        type: 3}
+      propertyPath: pos.z
+      value: 34.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

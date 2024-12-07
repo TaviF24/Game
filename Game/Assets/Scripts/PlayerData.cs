@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerData : MonoBehaviour
 {
     public static PlayerData instance;
-    private Vector3 pos;
 
     private void Awake()
     {
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded += SceneManager_sceneLoaded;
+
         if (instance == null)
         {
             instance = this;
@@ -16,17 +18,12 @@ public class PlayerData : MonoBehaviour
         }
         else if (instance != this)
         {
-            //Debug.Log(this.transform.position);
-            pos = this.transform.position + new Vector3(0,50,0);
-            //Destroy(gameObject);
-            //Debug.Log(instance.gameObject.transform.position);
+            Destroy(gameObject);
         }
     }
 
-    private void Start()
+    private void SceneManager_sceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log(instance.gameObject.transform.position);
-        Debug.Log(instance.transform.position);
-        instance.transform.position = pos;
+        instance.GetComponentInParent<Transform>().position = SceneManager.instance.targetPosition;
     }
 }
