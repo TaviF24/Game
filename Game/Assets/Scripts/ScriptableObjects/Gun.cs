@@ -13,6 +13,8 @@ public class Gun : MonoBehaviour
     [SerializeField] GameObject weapon;
     [SerializeField] GameObject mag;
     [SerializeField] ParticleSystem muzzleFlash;
+    [SerializeField] AudioClip shotSound;
+    [SerializeField] AudioClip reloadSound;
 
     public bool isInsideWall1 = false;
     public bool isInsideWall2 = false;
@@ -23,7 +25,8 @@ public class Gun : MonoBehaviour
     Vector3 shotDirection;
     Animator weaponAnimator;
     Animator magAnimator;
-   
+    AudioSource audioSource;
+
     private void Start()
     {
         player = GameManager.instance.player;
@@ -31,6 +34,8 @@ public class Gun : MonoBehaviour
         weaponAnimator = weapon.GetComponent<Animator>();
         magAnimator = mag.GetComponent<Animator>();
 
+        audioSource = gameObject.GetComponent<AudioSource>();
+       
         if (gunData.reloading)
         {
             gunData.reloading = false;
@@ -100,11 +105,12 @@ public class Gun : MonoBehaviour
                     newBullet.SetActive(true);
                     newBullet.GetComponent<Rigidbody>().velocity = shotDirection * 80;
                 }
-                
+
                 muzzleFlash.Play();
                 magAnimator.SetTrigger("Shoot");
                 weaponAnimator.SetTrigger("Shoot");
-
+                AudioManager.instance.PlayOneShot(shotSound, audioSource);
+                
                 gunData.currentAmo--;
                 timeSinceLastShot = 0f;
 
@@ -131,6 +137,7 @@ public class Gun : MonoBehaviour
         gunData.reloading = true;
         weaponAnimator.SetTrigger("Reload");
         magAnimator.SetTrigger("Reload");
+        AudioManager.instance.Play(reloadSound);
         yield return new WaitForSeconds(gunData.reloadTime);
         gunData.currentAmo = gunData.magSize;
         gunData.reloading = false;
