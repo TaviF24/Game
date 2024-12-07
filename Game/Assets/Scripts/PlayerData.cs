@@ -18,6 +18,7 @@ public class PlayerData : MonoBehaviour
         }
         else if (instance != this)
         {
+            //instance.GetComponentInChildren<ObjectPool>().DestroyBullets();
             Destroy(gameObject);
         }
     }
@@ -25,5 +26,6 @@ public class PlayerData : MonoBehaviour
     private void SceneManager_sceneLoaded(Scene scene, LoadSceneMode mode)
     {
         instance.GetComponentInParent<Transform>().position = SceneManager.instance.targetPosition;
+        instance.GetComponentInChildren<ObjectPool>().Init();
     }
 }

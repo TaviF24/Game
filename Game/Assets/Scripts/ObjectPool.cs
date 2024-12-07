@@ -11,10 +11,29 @@ public class ObjectPool : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < size; i++) {
+        Init();
+    }
+
+    public void Init()
+    {
+        if(poolObjects.Count != 0)
+        {
+            DestroyBullets();
+            poolObjects.Clear();
+        }
+        for (int i = 0; i < size; i++)
+        {
             GameObject newObject = Instantiate(objectFromPool);
             newObject.SetActive(false);
             poolObjects.Add(newObject);
+        }
+    }
+
+    public void DestroyBullets()
+    {
+        for (int i = 0; i < size; i++)
+        {
+            Destroy(poolObjects[i]);
         }
     }
 
