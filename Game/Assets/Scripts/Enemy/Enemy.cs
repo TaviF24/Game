@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IHear
 {
     private StateMachine stateMachine;
     private NavMeshAgent agent;
@@ -42,7 +42,6 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Velocity: " + agent.velocity);
         if (agent.velocity != Vector3.zero) 
         {
             if (anim.npcAnim.GetBool("still_detecting")) 
@@ -101,5 +100,15 @@ public class Enemy : MonoBehaviour
             }
         }
         return false;
+    }
+
+    public void RespondToSound(Sound sound)
+    {
+        lastKnownPos = sound.position;
+        if(currentState != "AttackState")
+        {
+            //change to Attacktate if you want the npc to move a little slower and to not come instantly to the sound source
+            stateMachine.ChangeState(new SearchState());
+        }
     }
 }

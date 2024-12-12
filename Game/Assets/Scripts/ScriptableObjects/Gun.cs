@@ -110,6 +110,8 @@ public class Gun : MonoBehaviour
                 magAnimator.SetTrigger("Shoot");
                 weaponAnimator.SetTrigger("Shoot");
                 AudioManager.instance.PlayOneShot(shotSound, audioSource);
+                Sound sound = new Sound(gunBarrel.position, 20f);
+                MakeSounds.MakeNoise(sound);
                 
                 gunData.currentAmo--;
                 timeSinceLastShot = 0f;
