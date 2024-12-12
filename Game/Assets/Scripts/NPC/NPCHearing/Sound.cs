@@ -12,10 +12,4 @@ public class Sound
         position = _position;
         range = _range;
     }
-
-    //public void OnDrawGizmosSelected()
-    //{
-    //    Gizmos.color = Color.yellow;
-    //    Gizmos.DrawSphere(position, range);
-    //}
 }
