@@ -31,8 +31,8 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         //    Debug.Log(components[i].name);
         //}
 
-        Color randomColor = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
-        gameObject.GetComponent<Renderer>().material.color = randomColor;
+        //Color randomColor = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
+        //gameObject.GetComponent<Renderer>().material.color = randomColor;
 
         Debug.Log("Enemy hit: " +  health + "HP");
     }

@@ -17,6 +17,7 @@ public class PatrolState : BaseState
         PatrolCycle();
         if(enemy.CanSeePlayer())
         {
+            enemy.anim.StopPatrolling();
             stateMachine.ChangeState(new AttackState());
         }
     }
@@ -45,5 +46,6 @@ public class PatrolState : BaseState
                 waitTimer = 0;
             }
         }
+        
     }
 }

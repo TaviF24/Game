@@ -29,7 +29,8 @@ public class SearchState : BaseState
             }
             if (searchTimer > 5) 
             {
-            stateMachine.ChangeState(new PatrolState());
+                enemy.anim.PutDownWeapon();
+                stateMachine.ChangeState(new PatrolState());
             }
         }
     }

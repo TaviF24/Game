@@ -11,7 +11,8 @@ public class AttackState : BaseState
     ObjectPool objectPool;
     public override void Enter()
     {
-        
+        enemy.alreadyStartedAnim = false;
+        enemy.anim.StopPatrollingWithWeapon();
     }
 
     public override void Exit()
@@ -27,7 +28,6 @@ public class AttackState : BaseState
             moveTimer += Time.deltaTime;
             shotTimer += Time.deltaTime;
             enemy.transform.LookAt(enemy.Player.transform);
-            //Shoot();
             if (shotTimer > gunEnemy.secondsBetweenShots)
             {
                 Shoot();
