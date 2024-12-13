@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IHear
 {
     private StateMachine stateMachine;
     private NavMeshAgent agent;
     private GameObject player;
+
     public GameObject debugsphere;
     private Vector3 lastKnownPos;
     public NavMeshAgent Agent { get => agent; }
@@ -22,6 +23,10 @@ public class Enemy : MonoBehaviour
 
     [SerializeField]
     private string currentState; // debugging
+
+    [HideInInspector]
+    public NPCAnim anim;
+    public bool alreadyStartedAnim = false;
     
 
     // Start is called before the first frame update
@@ -29,6 +34,7 @@ public class Enemy : MonoBehaviour
     {
         stateMachine = GetComponent<StateMachine>();
         agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<NPCAnim>();
         stateMachine.Initialize();
         player = GameManager.instance.player;
     }
@@ -36,6 +42,34 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (agent.velocity != Vector3.zero) 
+        {
+            if (anim.npcAnim.GetBool("still_detecting")) 
+            {
+                if (!alreadyStartedAnim)
+                {
+                    anim.PatrolWithWeapon();
+                    alreadyStartedAnim = true;
+                }
+            }
+            else
+            {
+                anim.Patrol();
+            }
+        }
+        else
+        {
+            if (anim.npcAnim.GetBool("still_detecting"))
+            {
+                anim.StopPatrollingWithWeapon();
+                alreadyStartedAnim = false;
+            }
+            else
+            {
+                anim.StopPatrolling();
+            }
+        }
+
         CanSeePlayer();
         currentState=stateMachine.activeState.ToString();
         debugsphere.transform.position = lastKnownPos;
@@ -66,5 +100,15 @@ public class Enemy : MonoBehaviour
             }
         }
         return false;
+    }
+
+    public void RespondToSound(Sound sound)
+    {
+        lastKnownPos = sound.position;
+        if(currentState != "AttackState")
+        {
+            //change to Attacktate if you want the npc to move a little slower and to not come instantly to the sound source
+            stateMachine.ChangeState(new SearchState());
+        }
     }
 }

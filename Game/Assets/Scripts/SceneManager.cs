@@ -6,17 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour
 {
-    public static SceneManager Instance;
+    public static SceneManager instance;
+    public Vector3 targetPosition = new Vector3(0,6,0);
     [SerializeField] Animator transitionAnim;
 
     private void Awake()
     {
-        if (Instance == null)
+        if (instance == null)
         {
-            Instance = this;
+            instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else { 
+        else if (instance != this)
+        {
             Destroy(gameObject);
         }
        

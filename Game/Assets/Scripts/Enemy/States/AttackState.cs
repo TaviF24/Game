@@ -9,9 +9,13 @@ public class AttackState : BaseState
     private float shotTimer;
 
     ObjectPool objectPool;
+    AudioSource audioSource;
+    
     public override void Enter()
     {
-        
+        enemy.alreadyStartedAnim = false;
+        enemy.anim.StopPatrollingWithWeapon();
+        audioSource = gunEnemy.GetComponent<AudioSource>();
     }
 
     public override void Exit()
@@ -27,7 +31,6 @@ public class AttackState : BaseState
             moveTimer += Time.deltaTime;
             shotTimer += Time.deltaTime;
             enemy.transform.LookAt(enemy.Player.transform);
-            //Shoot();
             if (shotTimer > gunEnemy.secondsBetweenShots)
             {
                 Shoot();
@@ -63,6 +66,7 @@ public class AttackState : BaseState
             bullet.transform.rotation = enemy.transform.rotation;
             bullet.SetActive(true);
             gunEnemy.muzzleFlash.Play();
+            audioSource.PlayOneShot(audioSource.clip);
             //compute direction
             Vector3 shotDirection = (enemy.Player.transform.position - gunbarrel.transform.position).normalized;
             //add force

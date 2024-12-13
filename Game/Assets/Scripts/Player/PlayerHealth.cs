@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour, IDamageable
 {
-    private static float health = 100f;
+    private float health = 100f;
     private float lerpTimer; 
 	[Header("Health Bar")]
     public float maxHealth = 100f; 
