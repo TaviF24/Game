@@ -15,6 +15,11 @@ public class PatrolState : BaseState
     public override void Perform()
     {
         PatrolCycle();
+        if(enemy.CanSeePlayer())
+        {
+            enemy.anim.StopPatrolling();
+            stateMachine.ChangeState(new AttackState());
+        }
     }
 
     public override void Exit()
@@ -41,5 +46,6 @@ public class PatrolState : BaseState
                 waitTimer = 0;
             }
         }
+        
     }
 }

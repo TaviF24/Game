@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class StateMachine : MonoBehaviour
 {
-    public BaseState activeState;
-    public PatrolState patrolState;
+    
+    public BaseState activeState = new PatrolState();
+   
 
     public void Initialize()
     {
-        patrolState = new PatrolState();
-        ChangeState(patrolState);
+        
+        ChangeState(new PatrolState());
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        activeState.SetGameObject(gameObject);
     }
 
     // Update is called once per frame
@@ -41,6 +42,7 @@ public class StateMachine : MonoBehaviour
         {
             activeState.stateMachine = this;
             activeState.enemy = GetComponent<Enemy>();
+            activeState.gunEnemy = GetComponentInChildren<GunEnemy>();
             activeState.Enter();
         }
     }
