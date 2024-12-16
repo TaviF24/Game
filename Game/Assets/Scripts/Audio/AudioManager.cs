@@ -58,6 +58,7 @@ public class AudioManager : MonoBehaviour
     {
         AudioSource audioSource = GetFreeAudioSourceFlag().audioSource;
         audioSource.clip = audioClip;
+        audioSource.volume = volume;
         audioSource.Play();
     }
 
