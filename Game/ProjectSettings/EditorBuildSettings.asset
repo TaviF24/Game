@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BankOutside.unity
     guid: 3dd6985d248a2724291b46a30456112a
+  - enabled: 1
+    path: Assets/Scenes/InsideVan.unity
+    guid: 9ed1eb809f823b346964c22145bb320b
   m_configObjects: {}

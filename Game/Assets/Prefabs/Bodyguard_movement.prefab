@@ -239,7 +239,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 5
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -275,7 +275,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -7034,7 +7034,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugsphere: {fileID: 0}
   path: {fileID: 0}
-  sightDistance: 20
+  sightDistance: 25
   fieldOfView: 85
   eyeHeight: 0.7
   currentState: 
