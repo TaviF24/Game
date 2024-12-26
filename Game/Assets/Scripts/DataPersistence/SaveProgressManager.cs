@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using System;
 
 public class SaveProgressManager : MonoBehaviour
 {
 
     [Header("File Storage Config")]
-    [SerializeField] private string fileName;
+    private string fileName = "game.data";
 
     private GameData gameData;
     public static SaveProgressManager instance;
@@ -75,7 +76,12 @@ public class SaveProgressManager : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-        SaveGame();
+        try
+        {
+            SaveGame();
+        }
+        catch (Exception) { }
+        
     }
 
     private List<IDataPersistence> FindAllDataPersistenceObjects()

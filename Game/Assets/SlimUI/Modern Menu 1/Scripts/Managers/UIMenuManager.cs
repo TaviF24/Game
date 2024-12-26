@@ -80,7 +80,10 @@ namespace SlimUI.ModernMenu{
         [Tooltip("The GameObject holding the Audio Source component for the SWOOSH SOUND when switching to the Settings Screen")]
         public AudioSource swooshSound;
 
-		void Start(){
+
+        private FileDataHandler fileDataHandler;
+
+        void Start(){
 			CameraObject = transform.GetComponent<Animator>();
 
 			playMenu.SetActive(false);
@@ -90,6 +93,8 @@ namespace SlimUI.ModernMenu{
 			mainMenu.SetActive(true);
 
 			SetThemeColors();
+
+			fileDataHandler = new FileDataHandler(Application.persistentDataPath, "game.data");
 		}
 
 		void SetThemeColors()
@@ -137,9 +142,35 @@ namespace SlimUI.ModernMenu{
 			mainMenu.SetActive(true);
 		}
 
-		public void LoadScene(string scene){
-			if(scene != ""){
-				StartCoroutine(LoadAsynchronously(scene));
+		public void LoadScene(string buttonType){
+            GameData gameData = fileDataHandler.Load();
+            switch (buttonType)
+			{
+				case "NewGame":
+					gameData = new GameData();
+					fileDataHandler.Save(gameData);
+                    StartCoroutine(LoadAsynchronously("SampleScene"));
+					break;
+				case "LoadGame":
+					if(gameData != null)
+					{
+                        StartCoroutine(LoadAsynchronously(gameData.lastScene));
+					}
+					else
+					{
+                        StartCoroutine(LoadAsynchronously("SampleScene"));
+                    }
+					break;
+				case "Continue":
+					if (gameData != null)
+					{
+						StartCoroutine(LoadAsynchronously(gameData.lastScene));
+					}
+					else
+					{
+						StartCoroutine(LoadAsynchronously("SampleScene"));
+					}
+					break;
 			}
 		}
 

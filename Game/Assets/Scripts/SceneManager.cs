@@ -20,13 +20,12 @@ public class SceneManager : MonoBehaviour
         else if (instance != this)
         {
             Destroy(gameObject);
-        }
-       
-        
+        } 
     }
 
     public void NextScene(string sceneName)
     {
+        SaveProgressManager.instance.SaveGame();
         StartCoroutine(LoadScene(sceneName));
     }
 

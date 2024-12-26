@@ -36,5 +36,6 @@ public class PlayerData : MonoBehaviour, IDataPersistence
     public void SaveData(ref GameData gameData)
     {
         gameData.playerPosition = instance.GetComponentInParent<Transform>().position;
+        gameData.lastScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
     }
 }
