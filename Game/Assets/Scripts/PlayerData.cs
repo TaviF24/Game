@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerData : MonoBehaviour
+public class PlayerData : MonoBehaviour, IDataPersistence
 {
     public static PlayerData instance;
 
@@ -27,5 +27,14 @@ public class PlayerData : MonoBehaviour
     {
         instance.GetComponentInParent<Transform>().position = SceneManager.instance.targetPosition;
         instance.GetComponentInChildren<ObjectPool>().Init();
+    }
+    public void LoadData(GameData gameData)
+    {
+        instance.GetComponentInParent<Transform>().position = gameData.playerPosition;
+    }
+
+    public void SaveData(ref GameData gameData)
+    {
+        gameData.playerPosition = instance.GetComponentInParent<Transform>().position;
     }
 }
