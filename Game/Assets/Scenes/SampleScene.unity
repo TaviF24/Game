@@ -762,6 +762,7 @@ GameObject:
   - component: {fileID: 935050254}
   - component: {fileID: 935050255}
   - component: {fileID: 935050256}
+  - component: {fileID: 935050257}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -848,6 +849,19 @@ MonoBehaviour:
   volume: 1
   clipList:
   - {fileID: 8300000, guid: f1751c7b7a3326d4c920c1fa76f38464, type: 3}
+--- !u!114 &935050257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935050251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da0c194b6b0d084697c8e9d884d1de7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: data.game
 --- !u!1 &980188937
 GameObject:
   m_ObjectHideFlags: 0
