@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHealth : MonoBehaviour, IDamageable
+public class PlayerHealth : MonoBehaviour, IDamageable, IDataPersistence
 {
     private float health = 100f;
     private float lerpTimer; 
@@ -109,4 +109,14 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 		lerpTimer = 0;
 		UpdateHealthUI();
 	}
+
+    public void LoadData(GameData gameData)
+    {
+		health = gameData.playerHealth;
+    }
+
+    public void SaveData(ref GameData gameData)
+    {
+		gameData.playerHealth = health;
+    }
 }
