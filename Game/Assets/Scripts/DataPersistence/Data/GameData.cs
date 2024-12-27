@@ -6,11 +6,13 @@ using UnityEngine;
 public class GameData
 {
     public Vector3 playerPosition;
+    public float playerHealth;
     public string lastScene;
 
     public GameData()
     {
         playerPosition = Vector3.zero;
         lastScene = "InsideVan";
+        playerHealth = 100f;
     }
 }
