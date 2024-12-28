@@ -106,7 +106,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IDataPersistence
 
 	public void TakeDamage(float damage)
 	{
-		health -= damage;
+		//health -= damage;
 		lerpTimer = 0;
 		UpdateHealthUI();
 		durationTimer = 0;
