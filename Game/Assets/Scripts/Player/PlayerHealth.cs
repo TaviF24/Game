@@ -29,6 +29,9 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IDataPersistence
     public Vector3 targetPosition;
     public string nextScene;
 
+
+    private PlayerShoot playerShoot;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -112,22 +115,24 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IDataPersistence
 
         if (health <= 0)
         {
-            //SceneManager.instance.targetPosition = new Vector3(94.46f, 5.52f, -80.13f);
-            //SceneManager.instance.NextScene("InsideVan");
-            //RestoreHealth(maxHealth);
             StartCoroutine(HandleDeath());
         }
     }
 
     private IEnumerator HandleDeath()
     {
+		playerShoot = GetComponent<PlayerShoot>();
+
+		playerShoot.BlockShooting(true);
         deathScreen.SetActive(true); // show death screen
+
         yield return new WaitForSeconds(deathScreenDuration);
 
         SceneManager.instance.targetPosition = targetPosition;
         SceneManager.instance.NextScene(nextScene);
         RestoreHealth(maxHealth);
 
+        playerShoot.BlockShooting(false);
         deathScreen.SetActive(false); // hide death screen
     }
 
