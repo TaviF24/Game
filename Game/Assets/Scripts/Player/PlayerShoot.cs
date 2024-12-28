@@ -15,4 +15,9 @@ public class PlayerShoot : MonoBehaviour
     {
         gun.StartReload();
     }
+
+    public void BlockShooting(bool isBlockedFromShootingArg)
+    {
+        gun.BlockShooting(isBlockedFromShootingArg);
+    }
 }

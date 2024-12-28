@@ -21,8 +21,19 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IDataPersistence
 	public float fadeSpeed = 1.5f; // how fast the overlay fades out
 	private float durationTimer;
 
-	// Start is called before the first frame update
-	void Start()
+    [Header("Death Screen")]
+    public GameObject deathScreen;
+    public float deathScreenDuration = 5f; // duration the death screen stays visible
+
+    [Header("On Death Scene Transition")]
+    public Vector3 targetPosition;
+    public string nextScene;
+
+
+    private PlayerShoot playerShoot;
+
+    // Start is called before the first frame update
+    void Start()
     {
         if (health < 0) // Initialize only if health has not been set
         {
@@ -37,8 +48,8 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IDataPersistence
             overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 0f);
         }
 
-           
-	}
+        deathScreen.SetActive(false); // death screen is initially hidden
+    }
 
 	// Update is called once per frame
 	void Update()
@@ -101,9 +112,31 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IDataPersistence
 		durationTimer = 0;
 		fadeSpeed = 1.5f;
 		overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 1);
-	}
 
-	public void RestoreHealth(float healAmount)
+        if (health <= 0)
+        {
+            StartCoroutine(HandleDeath());
+        }
+    }
+
+    private IEnumerator HandleDeath()
+    {
+		playerShoot = GetComponent<PlayerShoot>();
+
+		playerShoot.BlockShooting(true);
+        deathScreen.SetActive(true); // show death screen
+
+        yield return new WaitForSeconds(deathScreenDuration);
+
+        SceneManager.instance.targetPosition = targetPosition;
+        SceneManager.instance.NextScene(nextScene);
+        RestoreHealth(maxHealth);
+
+        playerShoot.BlockShooting(false);
+        deathScreen.SetActive(false); // hide death screen
+    }
+
+    public void RestoreHealth(float healAmount)
 	{
 		health += healAmount;
 		lerpTimer = 0;

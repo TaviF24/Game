@@ -123,6 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 61f3cc61e08507e4fb3f9137e33393d3, type: 2}
+--- !u!1 &147209260 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6570917757094901854, guid: 6d7facbfde2f9354fa692b22e003bebe,
+    type: 3}
+  m_PrefabInstance: {fileID: 830516840}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &162387498
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,6 +750,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8900405580405040291, guid: 6d7facbfde2f9354fa692b22e003bebe,
+        type: 3}
+      propertyPath: nextScene
+      value: InsideVan
+      objectReference: {fileID: 0}
+    - target: {fileID: 8900405580405040291, guid: 6d7facbfde2f9354fa692b22e003bebe,
+        type: 3}
+      propertyPath: deathScreen
+      value: 
+      objectReference: {fileID: 147209260}
+    - target: {fileID: 8900405580405040291, guid: 6d7facbfde2f9354fa692b22e003bebe,
+        type: 3}
+      propertyPath: targetPosition.x
+      value: 94.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 8900405580405040291, guid: 6d7facbfde2f9354fa692b22e003bebe,
+        type: 3}
+      propertyPath: targetPosition.y
+      value: 5.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 8900405580405040291, guid: 6d7facbfde2f9354fa692b22e003bebe,
+        type: 3}
+      propertyPath: targetPosition.z
+      value: -80.13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -861,7 +892,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8da0c194b6b0d084697c8e9d884d1de7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileName: data.game
 --- !u!1 &980188937
 GameObject:
   m_ObjectHideFlags: 0
