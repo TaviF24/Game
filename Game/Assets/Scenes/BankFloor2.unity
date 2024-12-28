@@ -792,7 +792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSourcePrefab: {fileID: 598409419}
   audioSourceCount: 3
-  volume: 0.2
+  volume: 0.309
   audioSources: []
 --- !u!114 &915165115
 MonoBehaviour:
