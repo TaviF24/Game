@@ -113,7 +113,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IDataPersistence
 		fadeSpeed = 1.5f;
 		overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 1);
 
-        if (health <= 0)
+        if (health <= 0 && !deathScreen.activeInHierarchy)
         {
             StartCoroutine(HandleDeath());
         }
@@ -125,20 +125,19 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IDataPersistence
 
 		playerShoot.BlockShooting(true);
         deathScreen.SetActive(true); // show death screen
-
         yield return new WaitForSeconds(deathScreenDuration);
 
         SceneManager.instance.targetPosition = targetPosition;
         SceneManager.instance.NextScene(nextScene);
-        RestoreHealth(maxHealth);
+        RestoreHealth();
 
         playerShoot.BlockShooting(false);
         deathScreen.SetActive(false); // hide death screen
     }
 
-    public void RestoreHealth(float healAmount)
+    public void RestoreHealth()
 	{
-		health += healAmount;
+		health = maxHealth;
 		lerpTimer = 0;
 		UpdateHealthUI();
 	}
