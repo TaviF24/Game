@@ -99,8 +99,8 @@ public class CameraDetection : MonoBehaviour
             {
                 concealmentHUDText.text = ""+concealment;
             }
-            if (concealment == 0)
-                Debug.Log("doesnt eixst");
+            // if (concealment == 0)
+            //     Debug.Log("doesnt eixst");
         }
     }
 }

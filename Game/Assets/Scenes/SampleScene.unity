@@ -168,6 +168,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1260980829031996425, guid: 161a6888569647742bb9ad44784d2bab,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1892360181}
+    - target: {fileID: 1260980829031996425, guid: 161a6888569647742bb9ad44784d2bab,
+        type: 3}
+      propertyPath: concealmentHUDText
+      value: 
+      objectReference: {fileID: 1514552969}
     - target: {fileID: 5742739910101336917, guid: 161a6888569647742bb9ad44784d2bab,
         type: 3}
       propertyPath: m_LocalPosition.x
