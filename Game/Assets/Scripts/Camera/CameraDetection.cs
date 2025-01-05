@@ -15,6 +15,7 @@ public class CameraDetection : MonoBehaviour
     private bool alreadyDetected = false;
 
     public TextMeshProUGUI concealmentHUDText;
+    public Image concealmentHUDImage;
 
     void Start()
     {
@@ -77,6 +78,7 @@ public class CameraDetection : MonoBehaviour
             {
                 concealmentHUDText.text = ""+concealment;
             }
+            concealmentHUDImage.fillAmount = concealment / 100f;
             if (concealment >= 100)
             {
                 Debug.Log("detectat");
@@ -95,6 +97,7 @@ public class CameraDetection : MonoBehaviour
             yield return new WaitForSeconds(0.03f);
             if (concealment > 0)
                 concealment--;
+            concealmentHUDImage.fillAmount = concealment / 100f;
             if (concealmentHUDText != null)
             {
                 concealmentHUDText.text = ""+concealment;
