@@ -1,0 +1,1975 @@
+fileFormatVersion: 2
+guid: ea04bdff10f2e0d4e9d1ca2b16816b78
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: anticipation_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1474
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c302d0a8195389408348b8d201261c4
+      internalID: 1398876855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_1
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 1474
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c102b99291b46947ab1aa63f6ae3b6a
+      internalID: 166135621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_2
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 1474
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fee9e131645e78e41ae4269047ee8622
+      internalID: -1142366476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_3
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 1474
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9607ae6bcd825141a9596c5b9b3ab53
+      internalID: -1501599181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_4
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 1474
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb49e47eccba5524fb47e6acda7deabc
+      internalID: -377434658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_5
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 1474
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a7abae3cf90d347bc63e1b8f4498ea
+      internalID: 128859595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_6
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 1474
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83bf52995489ebf48b29a68749d3ef44
+      internalID: -1545184039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1340
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4e88ba14e5af7b40a18fee9025e4ed9
+      internalID: -1656667137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_8
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 1340
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b7c036cc49a5146b6501835127b952
+      internalID: 599454449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_9
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 1340
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb43b4bfab7c3e24ebaceeeb10447f73
+      internalID: -999288917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_10
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 1340
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1191e7c28d51e4fba0f85b2dd67a17
+      internalID: 416129959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_11
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 1340
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 097a8f4995480ca43a31d85fc7774b8a
+      internalID: 678900258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_12
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 1340
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c7dfb948b868614eab73c6137122953
+      internalID: 353260109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_13
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 1340
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85ca6d4edab6e8343b70fce1df6a6d67
+      internalID: -1471011193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1206
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a010871b9df944ea24e809bac16cd5
+      internalID: -536093100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_15
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 1206
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 219f4f92faeb10f45bd191164da850d6
+      internalID: -1717077520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_16
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 1206
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8e88692a2e599247b694c78e53587a9
+      internalID: -1884514034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_17
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 1206
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7884f830b55de24fb96efe95d231ed3
+      internalID: -936948297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_18
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 1206
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fd7e98a2879e4d47945589c8fade40f
+      internalID: 805546361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_19
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 1206
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b0fc01c9931d8418625618ec931b33
+      internalID: 127633088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_20
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 1206
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab9df8f97ac10ce4789de6feaf2f8823
+      internalID: 2064136996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1072
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c992ed85178a9d4395b7a748452d498
+      internalID: 1503624999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_22
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 1072
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6958f25066a62194fbee3dc69c3ab456
+      internalID: 1177359026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_23
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 1072
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba077efcbfdd73b4383157625b7d37e5
+      internalID: -791271762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_24
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 1072
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd5d15e36f528d349ba4e8a97d2c040c
+      internalID: 1539460655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_25
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 1072
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad7d7b3b157998c4597527e1a600f2e7
+      internalID: 1215362720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_26
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 1072
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb4912b5cc0211c43b2e00dd5f079d40
+      internalID: 1059476514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_27
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 1072
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c08c33856a1a14044a91c1ae496a7f72
+      internalID: 448632010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 938
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e55baceada779546ab62f0675cc8e72
+      internalID: -1890298122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_29
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 938
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c747a9504951a649a015ef45e01981a
+      internalID: -1579880372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_30
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 938
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa6dc57f5525c48469aee4d34ff80948
+      internalID: -229558788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_31
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 938
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a28bc7646f22f248a0bfa93da4bb3f3
+      internalID: 1876679823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_32
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 938
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b212209feb216541b4deb56b4215002
+      internalID: 1746447643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_33
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 938
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dd0651fd7a55944eb3a97b65a2b812c
+      internalID: -1755920652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_34
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 938
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07fad47423acc2e409c454e552e23bc3
+      internalID: 1135285415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 804
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cca434dd81978c447ab41b1ccfe57aa5
+      internalID: -1924770613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_36
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 804
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5177ac28df0db641999d5bca11607f0
+      internalID: -446776725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_37
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 804
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece07ff0b5cb589489f86350ed013b7a
+      internalID: -975143357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_38
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 804
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e328153b3ae14d4a99ef51ad5e95f59
+      internalID: -652040561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_39
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 804
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20489a6ac0f83f74b99815061660c692
+      internalID: -75750624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_40
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 804
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b334070d7f9b5f4f8bb8f920da2f714
+      internalID: -1377155688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_41
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 804
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da2f6f9275a26a04a9ddbd4a94442b53
+      internalID: 144728613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 670
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28d4f6ddbdd271941b9805b8d1543dae
+      internalID: -668605615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_43
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 670
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a1465090d78ac449b704011159c4d79
+      internalID: -258234802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_44
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 670
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06e59c51b9f578842b5aeede27952217
+      internalID: -1436385445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_45
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 670
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17a5c65b02a888646b7dc31f56685a8c
+      internalID: -1212731162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_46
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 670
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdc8d6c41e769d14c9e8f22a1ce72a53
+      internalID: -751625613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_47
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 670
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7daeef7c3d4aa984c85d4732daee117b
+      internalID: 2108752745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_48
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 670
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f96f0e9a38847b74f8606129850755e4
+      internalID: 1096563979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 536
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20e94f737430a7c4ca98301bbefc62f0
+      internalID: -149714438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_50
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 536
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05da933d3df888c4f8a9c649dc6afcfd
+      internalID: -1295618299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_51
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 536
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c0a67a20e7d40e409388216e467b94d
+      internalID: -2010100864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_52
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 536
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69f928403a0360e42aae32dd81024419
+      internalID: 1874744935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_53
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 536
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5058ade20599d9143828d7e51dea0a8e
+      internalID: -888853993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_54
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 536
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc9b54d58f449b747b236e21c521c2ce
+      internalID: -328259148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_55
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 536
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 488509a6d788ea24c8dd48901e00de62
+      internalID: 1840795268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 402
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3f58900058747a47ac4c2f12630bd36
+      internalID: 1388919911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_57
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 402
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 866b729da48295a46906637793eca5a7
+      internalID: -529620699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_58
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 402
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42f8524700a10bf418ac8dc1c08315b7
+      internalID: -636789491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_59
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 402
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece796c440bd0b041ade4ee1a9d69780
+      internalID: -1477998219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_60
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 402
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ce69997ba9a8644ea0131c8936dbab1
+      internalID: 644456051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_61
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 402
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb2552fc4fe9b02418944ea93d7aac30
+      internalID: -647023876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_62
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 402
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 281365154949a1a4da231f47cf42dff5
+      internalID: -504924637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 268
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f00c043509110946808b5cbbe2b2bf1
+      internalID: -872973097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_64
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 268
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f9f20194b3b2c1469cceb44e1d9ed0d
+      internalID: -1623608679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_65
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 268
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 246667a0a5b694e41b38801f35d63073
+      internalID: -231067858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_66
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 268
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 741fcfd0c1ec6044c8d3196bc12cc673
+      internalID: -1025743113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_67
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 268
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acd3032a0da66dc4b9d14a88858c73a8
+      internalID: -2089862939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_68
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 268
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9201da4d320bc04e915b6b5fdf85822
+      internalID: -1796104968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_69
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 268
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 483f676e6f920fd4d84f1e679b068b50
+      internalID: 1262180818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 134
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9755df8d46551f64a9a7663f9d45f87f
+      internalID: 2049366962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_71
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 134
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47c99596334dbe54ea48d39755b71879
+      internalID: 517149396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_72
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 134
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a601ce52d20b14419e023b0772ae69d
+      internalID: 93896740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_73
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 134
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4e1fd45281fcca439787617b13cb79e
+      internalID: 504444560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_74
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 134
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d4823a91bad0064fa0831f5cfe53031
+      internalID: 579063691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_75
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 134
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18afb063fb47cc9459c2d173638870d3
+      internalID: 1699622053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_76
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 134
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 690a6cbec31406d4cab29407022b4129
+      internalID: 992638398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b3b1de290e2c7848972ec8ef366e925
+      internalID: -40686584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_78
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 0
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3197dd2be1c452c4198f080ea1c1336c
+      internalID: -1151068818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_79
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 0
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b9388a91fef9e4580e031e2b6b94fe
+      internalID: 943213590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_80
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 0
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a76300be4d0d6eb44bc55c8dc36e685c
+      internalID: -2015834770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_81
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 0
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91ad3ecd48e6a0445b9d83dff5e7c1d9
+      internalID: 1212344135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_82
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 0
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba30837a04095b14cb4a4aaba47d9e38
+      internalID: -1421383207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anticipation_83
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 0
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 959a5e6760029104a8f2a9474ed24e4b
+      internalID: -552775635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3e986fa53a2950446a6748194b503656
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      anticipation_0: 1398876855
+      anticipation_1: 166135621
+      anticipation_10: 416129959
+      anticipation_11: 678900258
+      anticipation_12: 353260109
+      anticipation_13: -1471011193
+      anticipation_14: -536093100
+      anticipation_15: -1717077520
+      anticipation_16: -1884514034
+      anticipation_17: -936948297
+      anticipation_18: 805546361
+      anticipation_19: 127633088
+      anticipation_2: -1142366476
+      anticipation_20: 2064136996
+      anticipation_21: 1503624999
+      anticipation_22: 1177359026
+      anticipation_23: -791271762
+      anticipation_24: 1539460655
+      anticipation_25: 1215362720
+      anticipation_26: 1059476514
+      anticipation_27: 448632010
+      anticipation_28: -1890298122
+      anticipation_29: -1579880372
+      anticipation_3: -1501599181
+      anticipation_30: -229558788
+      anticipation_31: 1876679823
+      anticipation_32: 1746447643
+      anticipation_33: -1755920652
+      anticipation_34: 1135285415
+      anticipation_35: -1924770613
+      anticipation_36: -446776725
+      anticipation_37: -975143357
+      anticipation_38: -652040561
+      anticipation_39: -75750624
+      anticipation_4: -377434658
+      anticipation_40: -1377155688
+      anticipation_41: 144728613
+      anticipation_42: -668605615
+      anticipation_43: -258234802
+      anticipation_44: -1436385445
+      anticipation_45: -1212731162
+      anticipation_46: -751625613
+      anticipation_47: 2108752745
+      anticipation_48: 1096563979
+      anticipation_49: -149714438
+      anticipation_5: 128859595
+      anticipation_50: -1295618299
+      anticipation_51: -2010100864
+      anticipation_52: 1874744935
+      anticipation_53: -888853993
+      anticipation_54: -328259148
+      anticipation_55: 1840795268
+      anticipation_56: 1388919911
+      anticipation_57: -529620699
+      anticipation_58: -636789491
+      anticipation_59: -1477998219
+      anticipation_6: -1545184039
+      anticipation_60: 644456051
+      anticipation_61: -647023876
+      anticipation_62: -504924637
+      anticipation_63: -872973097
+      anticipation_64: -1623608679
+      anticipation_65: -231067858
+      anticipation_66: -1025743113
+      anticipation_67: -2089862939
+      anticipation_68: -1796104968
+      anticipation_69: 1262180818
+      anticipation_7: -1656667137
+      anticipation_70: 2049366962
+      anticipation_71: 517149396
+      anticipation_72: 93896740
+      anticipation_73: 504444560
+      anticipation_74: 579063691
+      anticipation_75: 1699622053
+      anticipation_76: 992638398
+      anticipation_77: -40686584
+      anticipation_78: -1151068818
+      anticipation_79: 943213590
+      anticipation_8: 599454449
+      anticipation_80: -2015834770
+      anticipation_81: 1212344135
+      anticipation_82: -1421383207
+      anticipation_83: -552775635
+      anticipation_9: -999288917
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
