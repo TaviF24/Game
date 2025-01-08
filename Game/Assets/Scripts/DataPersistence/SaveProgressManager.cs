@@ -60,6 +60,7 @@ public class SaveProgressManager : MonoBehaviour
         }
 
         Debug.Log("Player load pos: " + gameData.playerPosition);
+        Debug.Log("detected?" + gameData.detected);
     }
     public void SaveGame()
     {
@@ -71,7 +72,8 @@ public class SaveProgressManager : MonoBehaviour
 
         fileDataHandler.Save(gameData);
 
-        Debug.Log("Player save pos: " + gameData.playerPosition);
+        Debug.Log("Player load pos: " + gameData.playerPosition);
+        Debug.Log("detected?" + gameData.detected);
     }
 
     private void OnApplicationQuit()
