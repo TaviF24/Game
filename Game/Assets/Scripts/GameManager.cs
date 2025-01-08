@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,8 +9,9 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     public AudioManager audioManager;
     public BackgroundMusicManager backgroundMusicManager;
+    public GameObject overlayUI;
 
-    private void Awake()
+	private void Awake()
     {
         if (instance == null)
         {
@@ -25,9 +27,43 @@ public class GameManager : MonoBehaviour
         player = GameObject.FindWithTag("Player");
     }
 
-    private void Start()
+
+	private void Update()
+	{
+		if (overlayUI.activeSelf)
+		{
+			// Disable game input
+			return;
+		}
+
+		//if (Input.GetKeyDown(KeyCode.Tab))
+		//{
+		//	if (player.GetComponent<PauseMenu>().IsPaused())
+		//	{
+		//		player.GetComponent<PauseMenu>().ResumeGame();
+		//	}
+		//	else
+		//	{
+		//		player.GetComponent<PauseMenu>().PauseGame();
+		//	}
+		//}
+		Debug.Log(Input.GetAxis("Mouse X"));
+		Debug.Log(Input.GetAxis("Mouse Y"));
+	}
+
+	private void Start()
+    {
+        lockCursor();
+	}
+
+	public void lockCursor()
     {
         Cursor.lockState = CursorLockMode.Locked;
-    }
+	}
 
+	public void unlockCursor()
+	{
+		Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+	}
 }

@@ -8,7 +8,7 @@ public class SceneManager : MonoBehaviour
 {
     public static SceneManager instance;
     [SerializeField] public Vector3 targetPosition = new Vector3(0,6,0);
-    [SerializeField] Animator transitionAnim;
+    [SerializeField] static Animator transitionAnim;
 
     private void Awake()
     {
@@ -29,7 +29,7 @@ public class SceneManager : MonoBehaviour
         StartCoroutine(LoadScene(sceneName));
     }
 
-    IEnumerator LoadScene(string sceneName)
+    public static IEnumerator LoadScene(string sceneName)
     {
         transitionAnim.SetTrigger("End");
         yield return new WaitForSeconds(0.1f);

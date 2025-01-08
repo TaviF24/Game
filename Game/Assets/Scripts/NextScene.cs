@@ -13,6 +13,6 @@ public class NextScene : MonoBehaviour
         {
             SceneManager.instance.targetPosition = pos;
             SceneManager.instance.NextScene(sceneName);
-        }
+		}
     }
 }
