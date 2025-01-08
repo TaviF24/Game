@@ -8,134 +8,104 @@ public class CameraDetection : MonoBehaviour, IDataPersistence
 
     public Transform player;
     public float max_dist = 10f;
-    public float fov = 60f;
+    public float fov = 75f;
     public AudioSource beep, detected;
-    private int concealment = 0;
     private Coroutine loseDetection;
     private Coroutine addDetection;
-    private bool alreadyDetected = false;
+    public DetectionManager DetectionManager;
 
-    public TextMeshProUGUI concealmentHUDText;
-    public Image concealmentHUDImage;
 
-    public TriggerLoud triggerLoud;
 
-    void Start()
-    {
-        Debug.Log("incarcat");
-        if (concealmentHUDText != null)
-        {
-            concealmentHUDText.text = "";
-        }
-    }
+    private bool isDetectingPlayer = false;
+
     public void LoadData(GameData data)
     {
-        alreadyDetected = data.detected;
+        DetectionManager.instance.alreadyDetected = data.detected;
     }
 
     public void SaveData(ref GameData data)
     {
-        data.detected = alreadyDetected;
+        data.detected = DetectionManager.instance.alreadyDetected;
     }
-  void Update()
-{
-    if (concealment >= 100 || alreadyDetected)
-        return;
-
-    if (IsPlayerDetected())
+    void Update()
     {
-        HandleDetection();
-    }
-    else
-    {
-        HandleLostDetection();
-    }
-}
+        if (DetectionManager.instance.concealment >= 100 || DetectionManager.instance.alreadyDetected)
+            return;
 
-bool IsPlayerDetected()
-{
-    Vector3 directionPlayer = player.position - transform.position;
-    float distToPlayer = directionPlayer.magnitude;
-    if (distToPlayer > max_dist)
+        if (IsPlayerDetected())
+        {
+            if (!isDetectingPlayer)
+            {
+                isDetectingPlayer = true;
+                DetectionManager.instance.registerCameraDetection();
+            }
+            HandleDetection();
+        }
+        else
+        {
+            if (isDetectingPlayer)
+            {
+                isDetectingPlayer = false;
+                DetectionManager.instance.unregisterCameraDetection();
+            }
+
+            if (!DetectionManager.instance.isAnyCameraDetecting())
+                HandleLostDetection();
+        }
+    }
+
+    bool IsPlayerDetected()
+    {
+        Vector3 directionPlayer = player.position - transform.position;
+        float distToPlayer = directionPlayer.magnitude;
+        if (distToPlayer > max_dist)
+            return false;
+        if (Vector3.Angle(transform.forward, directionPlayer) > fov / 2f)
+            return false;
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, directionPlayer, out hit, max_dist))
+        
+            return hit.transform == player;
+        
         return false;
-    if (Vector3.Angle(transform.forward, directionPlayer) > fov / 2f)
-        return false;
-    RaycastHit hit;
-    if (Physics.Raycast(transform.position, directionPlayer, out hit, max_dist))
-    {
-        return hit.transform == player;
     }
-    return false;
-}
 
-void HandleDetection()
-{
-    addDetection ??= StartCoroutine(AddDetection());
-    if (loseDetection != null)
+    void HandleDetection()
     {
-        StopCoroutine(loseDetection);
-        loseDetection = null;
+        addDetection ??= StartCoroutine(AddDetection());
+        if (loseDetection != null)
+        {
+            StopCoroutine(loseDetection);
+            loseDetection = null;
+        }
     }
-}
 
-void HandleLostDetection()
-{
-    loseDetection ??= StartCoroutine(LoseDetection());
-    if (addDetection != null)
+    void HandleLostDetection()
     {
-        StopCoroutine(addDetection);
-        addDetection = null;
+        loseDetection ??= StartCoroutine(LoseDetection());
+        if (addDetection != null)
+        {
+            StopCoroutine(addDetection);
+            addDetection = null;
+        }
     }
-}
 
     private IEnumerator AddDetection()
     {
-        while (!alreadyDetected)
+        while (!DetectionManager.instance.alreadyDetected)
         {
             yield return new WaitForSeconds(0.025f);
-            concealment++;
-            if (concealmentHUDText != null)
-            {
-                concealmentHUDText.text = ""+concealment;
-            }
-            concealmentHUDImage.fillAmount = concealment / 100f;
-            float beepInterval = Mathf.Lerp(0.15f, 0.05f, concealment / 100f);
-            if (concealment % Mathf.RoundToInt(beepInterval * 100) == 0)
-            {
-                beep.volume = 0.5f;
-                beep.Play();
-            }
-            if (concealment >= 100)
-            {
-                Debug.Log("detectat");
-                triggerLoud.forceTrigger();
-                detected.volume = 0.1f;
-                detected.Play();
-                alreadyDetected = true;
-                if (concealmentHUDText != null)
-                {
-                    concealmentHUDText.text = "Detected!";
-                    yield return new WaitForSeconds(3f);
-                    concealmentHUDText.text = "";
-                    concealmentHUDImage.fillAmount = 0;
-                }
-            }
+            DetectionManager.instance.updateGlobalConcealment(1);
         }
     }
+
     private IEnumerator LoseDetection()
     {
-        while (!alreadyDetected)
+        while (!DetectionManager.instance.alreadyDetected && !DetectionManager.instance.isAnyCameraDetecting())
         {
             yield return new WaitForSeconds(0.03f);
-            if (concealment > 0)
-                concealment--;
-            concealmentHUDImage.fillAmount = concealment / 100f;
-            if (concealmentHUDText != null)
-            {
-                concealmentHUDText.text = concealment==0?"":concealment.ToString();
-            }
-            // if (concealment == 0)
-            //     Debug.Log("doesnt eixst");
+            DetectionManager.instance.updateGlobalConcealment(-1);
         }
     }
+
 }

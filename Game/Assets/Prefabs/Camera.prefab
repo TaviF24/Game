@@ -43,7 +43,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cddce9784ad36464b974cae3672b7adb, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -128,6 +128,57 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &3103093627237984945
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7048068228772124872}
+  - component: {fileID: 7446529958484218643}
+  m_Layer: 0
+  m_Name: DetectionManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7048068228772124872
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3103093627237984945}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5742739910101336917}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7446529958484218643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3103093627237984945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e97ecadaee413c458cbca20d3f36071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  concealment: 0
+  maxConcealment: 100
+  alreadyDetected: 0
+  concealmentHUDText: {fileID: 0}
+  concealmentHUDImage: {fileID: 0}
+  beep: {fileID: 999505736900366684}
+  detected: {fileID: 4787920720897048399}
 --- !u!1 &4324719805575528892
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,8 +302,7 @@ MonoBehaviour:
   fov: 60
   beep: {fileID: 999505736900366684}
   detected: {fileID: 4787920720897048399}
-  concealmentHUDText: {fileID: 0}
-  concealmentHUDImage: {fileID: 0}
+  DetectionManager: {fileID: 7446529958484218643}
   triggerLoud: {fileID: 0}
 --- !u!1 &6058153959501551393
 GameObject:
@@ -297,7 +347,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 590d0827bf4a7fc419f01fa3e4c0fb7b, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -416,6 +466,7 @@ Transform:
   - {fileID: 3142231663246605482}
   - {fileID: 484645932591819669}
   - {fileID: 809646815166089346}
+  - {fileID: 7048068228772124872}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &4326367969744859146
