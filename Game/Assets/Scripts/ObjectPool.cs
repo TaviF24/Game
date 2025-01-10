@@ -62,4 +62,16 @@ public class ObjectPool : MonoBehaviour
         return cnt;
     }
 
+    public List<GameObject> getActiveObjects()
+    {
+        List<GameObject> activeObjects = new List<GameObject>();
+        foreach (GameObject obj in poolObjects)
+        {
+            if (obj.activeInHierarchy)
+            {
+                activeObjects.Add(obj);
+            }
+        }
+        return activeObjects;
+    }
 }
