@@ -95,6 +95,8 @@ public class DetectionManager : MonoBehaviour, IDataPersistence
         timeInAnticipation = 0f;
         Debug.Log("Starting Anticipation");
         ShowHUD(anticipationHUD, assaultHUD);
+
+        GeneralDetection.instance.TriggerAssault_GiveEnemyLastKnownPos();
     }
 
     private void StartAssault()
@@ -102,6 +104,8 @@ public class DetectionManager : MonoBehaviour, IDataPersistence
         assault = true;
         anticipation = false;
         ShowHUD(assaultHUD, anticipationHUD);
+
+        GeneralDetection.instance.TriggerAssault_GiveEnemyLastKnownPos();
     }
     public void forceTrigger()
     {

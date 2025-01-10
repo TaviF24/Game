@@ -16,6 +16,8 @@ public class AttackState : BaseState
         enemy.alreadyStartedAnim = false;
         enemy.anim.StopPatrollingWithWeapon();
         audioSource = gunEnemy.GetComponent<AudioSource>();
+
+        GeneralDetection.instance.TriggerAssault_GiveEnemyLastKnownPos();
     }
 
     public override void Exit()
