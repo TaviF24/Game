@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    [SerializeField] GunData gunData;
+    [SerializeField] public GunData gunData;
     [SerializeField] Transform gunBarrel;
     [SerializeField] Transform imaginaryTarget;
     [SerializeField] GameObject bullet;
@@ -18,6 +18,8 @@ public class Gun : MonoBehaviour
 
     public bool isInsideWall1 = false;
     public bool isInsideWall2 = false;
+
+    private bool isBlockedFromShooting = false;
 
     float timeSinceLastShot;
     Camera camera;
@@ -59,7 +61,7 @@ public class Gun : MonoBehaviour
     private bool CanShoot()
     {   
         //fireRate = 600 per min => 600/60 = 10 per sec => 1/10 = 0.1 s between bullets
-        if (!gunData.reloading && /*!isInsideWall &&*/ timeSinceLastShot > 1f / (gunData.fireRate / 60f)) 
+        if (!gunData.reloading && /*!isInsideWall &&*/ timeSinceLastShot > 1f / (gunData.fireRate / 60f) && !isBlockedFromShooting) 
         {
             return true;
         }
@@ -125,6 +127,11 @@ public class Gun : MonoBehaviour
             
         }
 
+    }
+
+    public void BlockShooting(bool isBlockedFromShootingArg)
+    {
+        isBlockedFromShooting = isBlockedFromShootingArg;
     }
 
     public void StartReload()

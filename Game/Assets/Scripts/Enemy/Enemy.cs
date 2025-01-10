@@ -27,7 +27,10 @@ public class Enemy : MonoBehaviour, IHear
     [HideInInspector]
     public NPCAnim anim;
     public bool alreadyStartedAnim = false;
-    
+
+    private float increasedSightDistance;
+    private float nonIncreasedSightDistance;
+
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +40,8 @@ public class Enemy : MonoBehaviour, IHear
         anim = GetComponent<NPCAnim>();
         stateMachine.Initialize();
         player = GameManager.instance.player;
+        increasedSightDistance = sightDistance * 1.5f;
+        nonIncreasedSightDistance = sightDistance;
     }
 
     // Update is called once per frame
@@ -87,6 +92,14 @@ public class Enemy : MonoBehaviour, IHear
                 {
                     Ray ray = new Ray(transform.position+ (Vector3.up * eyeHeight), targetDirection);
                     RaycastHit hitInfo = new RaycastHit();
+                    if(currentState != "PatrolState")
+                    {
+                        sightDistance = increasedSightDistance;
+                    }
+                    else
+                    {
+                        sightDistance = nonIncreasedSightDistance;
+                    }
                     if(Physics.Raycast(ray, out hitInfo,sightDistance)) 
                     {
                         if(hitInfo.transform.gameObject==player) 

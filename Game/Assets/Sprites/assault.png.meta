@@ -1,0 +1,2591 @@
+fileFormatVersion: 2
+guid: a9e309f2b9d81994d891a5c9e0a4914c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: assault_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2010
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 015eb6f9b9da0554ea7a55fb4e3a2799
+      internalID: -1539044343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_1
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 2010
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51a1b3a09f5f09a468253caffdcd9d42
+      internalID: 1027328425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_2
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 2010
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 776f151d5ef50ee4a8d9945375909214
+      internalID: 497331259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_3
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 2010
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85b886969e991fc418ef655f5887767e
+      internalID: 759377449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_4
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 2010
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8d19262052a8084aa2ce8a04a18d573
+      internalID: 440994084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_5
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 2010
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72836583ce9a4664baf9b9d8eedd1076
+      internalID: 65761134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_6
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 2010
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff8c01a696534e74d8482a27ef84ef11
+      internalID: -328701139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1876
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae87c45adb9b86e488af449fcd51889a
+      internalID: 1148194371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_8
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 1876
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ef17adca08da8a43b90564cc45d3e96
+      internalID: -57770076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_9
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 1876
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1627f7cda58a5844cad80c527892aeed
+      internalID: 1624686524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_10
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 1876
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17cd58a10b09c2c41acb6b397cc60fe6
+      internalID: -1636535889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_11
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 1876
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeb0f6a80e1e2814596822841acd85e9
+      internalID: 1857792610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_12
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 1876
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1bbd80d0710bcd4f980e1950fab40aa
+      internalID: -170202606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_13
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 1876
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67f106a8fff22b94c81831a5921dde25
+      internalID: 1075676836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1742
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfcf3163c4911fa48a52eb288a682377
+      internalID: -582158117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_15
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 1742
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6da2be46cc81fe4ca3870d02b4bfbd9
+      internalID: 821406526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_16
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 1742
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7e103df2e413e142972bb04f2f0fa71
+      internalID: -912422347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_17
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 1742
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 204ea6aa3412d8448aa5dd3693bf7175
+      internalID: -807694992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_18
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 1742
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c5a1dc59fcefd141a362b122a56272e
+      internalID: 1559150860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_19
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 1742
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3ecdaabfef7814d80dcdaea4a8eacd
+      internalID: -1309650374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_20
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 1742
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ace2dec62a1a0ce46a97977bde76bfa9
+      internalID: -1466417949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1608
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc73829f919198448863414c8036006
+      internalID: -1373479105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_22
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 1608
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 716d8a70b7967a24c82224e1948bd661
+      internalID: 2070809381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_23
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 1608
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f49b036a5523d343a8bb241dd41ac76
+      internalID: -895191926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_24
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 1608
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13221716ba96c9845a061cade0a01d80
+      internalID: -530843599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_25
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 1608
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 158910fc1ab8e9e479497528daed59de
+      internalID: 445236722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_26
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 1608
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cca4a2f5d3619b44db36db9053c1ee9e
+      internalID: -1161115739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_27
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 1608
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a33b148bc8409f468fd74508c833ea3
+      internalID: -397841481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1474
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 623c152a216463a4c8e2ffa827630111
+      internalID: 2033594418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_29
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 1474
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72cf841b7a139454daa274d124226de5
+      internalID: -462013873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_30
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 1474
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d481a621e5a5db44896989a8189e07c
+      internalID: 1967126487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_31
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 1474
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfa01368049ee3a48b3079744fe8ae73
+      internalID: -819007072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_32
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 1474
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bfd3fae7109df7428363dfe8f2cf3ce
+      internalID: 2051888080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_33
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 1474
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29b0af9b8a27a8842b5e1157fe4e024b
+      internalID: 1623866279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_34
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 1474
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57e841e3f77762744a8b41e6f92b145b
+      internalID: 1969402485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1340
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64053559866672347b25c56d96bb32b6
+      internalID: -105053780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_36
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 1340
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3e75a8b9151d9543bb8318a25aa64fa
+      internalID: 2085961029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_37
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 1340
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a24c77478c90bb4180b0fa3ca9d3b72
+      internalID: 1179873426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_38
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 1340
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dd796595d4cd604695ecf2129a38afb
+      internalID: 1270330297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_39
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 1340
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 503f55312b91920498dde8b0268bcd99
+      internalID: 534974500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_40
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 1340
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2642208f4c32f094cae47ee2ab2809a1
+      internalID: 1744037560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_41
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 1340
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c79dd850da70ac54b814981c67b612d3
+      internalID: 1952760408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1206
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43d5aaf5f752c7c45909ffa7592c7b60
+      internalID: -621256681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_43
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 1206
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c08a1147809f163409706420a4d2d8ac
+      internalID: 1096753998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_44
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 1206
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08aa1779b6a7c7942a0456abe7014bb9
+      internalID: -437630057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_45
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 1206
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ce1292600f0f9e48979fad6c8be1937
+      internalID: -1676562880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_46
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 1206
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 830436aed09c39e4eb66df0b5187a4d6
+      internalID: 120637878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_47
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 1206
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5fe2d6c5dc4517449f13eda2f1434f5
+      internalID: -1383913167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_48
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 1206
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f55e554e5ef7b30488300d5c821e4bd8
+      internalID: -1963647722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1072
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29e083e5d00ae63469276cde946651c3
+      internalID: 1114660992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_50
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 1072
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f342d63e044ef448fb86364fdb2e2c
+      internalID: -1303716674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_51
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 1072
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2b70929fe8225f4fa4c51d744e1970f
+      internalID: -756253562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_52
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 1072
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42ff65400b135114e9d9ed1326e6fa1d
+      internalID: 1916141408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_53
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 1072
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8e06ddc75133bf4b9ee34461d8bbbb8
+      internalID: -838707774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_54
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 1072
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bd8191124e17804fba0f8e86237032c
+      internalID: 809584228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_55
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 1072
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2775be2cd371de0409af187029998c5d
+      internalID: -1616395059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 938
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 336a28fc9cbc2d8479c137c40a0392d4
+      internalID: -1772931395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_57
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 938
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fa8855baaf1294489f01407a250d005
+      internalID: 1131898429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_58
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 938
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cc8fe9e863a5e4489ae9e2cbe9d557b
+      internalID: -197647154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_59
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 938
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62286ff6213305a43aaaa7c3510e84be
+      internalID: -1029276874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_60
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 938
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c0cbc56d079f0346bd7e410ed494664
+      internalID: 300101507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_61
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 938
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e907fc9988b2ab47bb8ddb5f108dd0f
+      internalID: 898991276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_62
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 938
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a053b45d91d793446b0cf1768c24ba75
+      internalID: 1165089949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 804
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db058144fe9f35d4ca389ae8f9a9260c
+      internalID: -1585165003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_64
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 804
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 859aa732d2110ee4a8247a3fe117e618
+      internalID: 1077622529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_65
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 804
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 249c07fa4437a134a920a33bc01031b8
+      internalID: -1514008992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_66
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 804
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b1883a34b92ae409a6599087d3b862
+      internalID: 2061408371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_67
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 804
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62976ff0f3b70b2459d44bf5415fa20e
+      internalID: 304207612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_68
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 804
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe22a7207ab746b478260ce35143f168
+      internalID: 708851842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_69
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 804
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6812d10643ab5fe47a9b029d0331bebe
+      internalID: -1244611679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 670
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73c9a892ed175704f87b32b14119f1fc
+      internalID: -217791470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_71
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 670
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e73a37894e6b7d449a5eee5940ae5395
+      internalID: 2056869139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_72
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 670
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 763b7520a115cd345b4649b7824b0a1e
+      internalID: 327876880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_73
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 670
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 995f3e98eb5bc0b4d8dbf72e9cf9eebc
+      internalID: 422008515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_74
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 670
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4af37adbf51ff2945ba4c30fc61b1417
+      internalID: -1782165986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_75
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 670
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a83ea93157509f847bb758b337b11b5d
+      internalID: 271267711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_76
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 670
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83acf18459011354b889b99322332e4c
+      internalID: 1164102232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 536
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a17faab067ef5974aa67cef4729018c9
+      internalID: 742205505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_78
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 536
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 326a3fa06a355de45a1c153cd2db3789
+      internalID: -622174075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_79
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 536
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea75b2a165d2644896c847156c3322f
+      internalID: -110202892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_80
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 536
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d637585e57e8524d98d623d35eb55d4
+      internalID: -1801658710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_81
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 536
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 549c308a702c5944b8793f8513344591
+      internalID: -1660717392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_82
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 536
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 112b4e887d3a1574e857b2ad4ddf521e
+      internalID: 1941156040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_83
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 536
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5d8fc63e20ca4a479ec408a5c0bb33c
+      internalID: 1150349107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 402
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2e0d7b60acf8c64586d5385c8aadfba
+      internalID: 915931548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_85
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 402
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce90afd6063ab4a4285216077f0e2e46
+      internalID: -280008351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_86
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 402
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea55d45fa91ebed4dbbcb82bc65a5ddc
+      internalID: -1727383551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_87
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 402
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d175ae0a97429c43b5cbb5545b91c7c
+      internalID: -521138139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_88
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 402
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bb778af350b3f342b3ff2b799f684b7
+      internalID: 1161812507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_89
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 402
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0054c9ed5488b449a35666e3850cf16
+      internalID: 111735530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_90
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 402
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f49fa4de55f511147bfa94b9985a1c44
+      internalID: -328314020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_91
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 268
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c135e55e2a5259e40bc4ff783f9c5266
+      internalID: -1262151427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_92
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 268
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5157701db6fbf34fa56dc685f866e3c
+      internalID: 1282221861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_93
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 268
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11f7bbe291447194dbc726af4dd5db2c
+      internalID: 572320865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_94
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 268
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 276d4cea0766e48479b05c06b431c11b
+      internalID: -1239647894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_95
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 268
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 518ce3ada25a72c43b3f6e42d12c15c2
+      internalID: 258914497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_96
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 268
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75006941ac464264ba300d12aa7fcc62
+      internalID: 1573016164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_97
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 268
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8872cecea047149418c83cda8e4fcce7
+      internalID: -1370817321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_98
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 134
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3a0e4c7af5756b4588920b2356c7676
+      internalID: -1274648614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_99
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 134
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c56865c0cc5ae6f4a972ad31fe7ba082
+      internalID: -1540918051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_100
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 134
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59167e97b44da8f48a79112a07c3960e
+      internalID: 2065791362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_101
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 134
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5552fac720c573f48a9b80757c99142d
+      internalID: -1568834220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_102
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 134
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bec3ed91774e14949a1140a47cf75d69
+      internalID: 192847642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_103
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 134
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7602d6d8f1c91e1438f66db57ae8d324
+      internalID: 1823498700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_104
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 134
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff2f30dcbff4be4f9da52c25c8dc070
+      internalID: -2107954501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_105
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddecd2b56cd22d847acab9ecdae2976e
+      internalID: 1435588073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_106
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 0
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4874c403208237b4c831e10f041c00d2
+      internalID: 1710951242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_107
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 0
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c86b51e4fd9d5348a9f4b3da86ad434
+      internalID: 1419972869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_108
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 0
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee29bacd22ef51a45bda18af505e9791
+      internalID: 692413272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_109
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 0
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf19369d7be194e408e6ffeffa7ebfa7
+      internalID: -1962909412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_110
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 0
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b45ff6b6460c2e499abf792998ea3a5
+      internalID: -1446244470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assault_111
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 0
+        width: 762
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53d3462064d775741baf0f18f0b709a8
+      internalID: 1760390909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      assault_0: -1539044343
+      assault_1: 1027328425
+      assault_10: -1636535889
+      assault_100: 2065791362
+      assault_101: -1568834220
+      assault_102: 192847642
+      assault_103: 1823498700
+      assault_104: -2107954501
+      assault_105: 1435588073
+      assault_106: 1710951242
+      assault_107: 1419972869
+      assault_108: 692413272
+      assault_109: -1962909412
+      assault_11: 1857792610
+      assault_110: -1446244470
+      assault_111: 1760390909
+      assault_12: -170202606
+      assault_13: 1075676836
+      assault_14: -582158117
+      assault_15: 821406526
+      assault_16: -912422347
+      assault_17: -807694992
+      assault_18: 1559150860
+      assault_19: -1309650374
+      assault_2: 497331259
+      assault_20: -1466417949
+      assault_21: -1373479105
+      assault_22: 2070809381
+      assault_23: -895191926
+      assault_24: -530843599
+      assault_25: 445236722
+      assault_26: -1161115739
+      assault_27: -397841481
+      assault_28: 2033594418
+      assault_29: -462013873
+      assault_3: 759377449
+      assault_30: 1967126487
+      assault_31: -819007072
+      assault_32: 2051888080
+      assault_33: 1623866279
+      assault_34: 1969402485
+      assault_35: -105053780
+      assault_36: 2085961029
+      assault_37: 1179873426
+      assault_38: 1270330297
+      assault_39: 534974500
+      assault_4: 440994084
+      assault_40: 1744037560
+      assault_41: 1952760408
+      assault_42: -621256681
+      assault_43: 1096753998
+      assault_44: -437630057
+      assault_45: -1676562880
+      assault_46: 120637878
+      assault_47: -1383913167
+      assault_48: -1963647722
+      assault_49: 1114660992
+      assault_5: 65761134
+      assault_50: -1303716674
+      assault_51: -756253562
+      assault_52: 1916141408
+      assault_53: -838707774
+      assault_54: 809584228
+      assault_55: -1616395059
+      assault_56: -1772931395
+      assault_57: 1131898429
+      assault_58: -197647154
+      assault_59: -1029276874
+      assault_6: -328701139
+      assault_60: 300101507
+      assault_61: 898991276
+      assault_62: 1165089949
+      assault_63: -1585165003
+      assault_64: 1077622529
+      assault_65: -1514008992
+      assault_66: 2061408371
+      assault_67: 304207612
+      assault_68: 708851842
+      assault_69: -1244611679
+      assault_7: 1148194371
+      assault_70: -217791470
+      assault_71: 2056869139
+      assault_72: 327876880
+      assault_73: 422008515
+      assault_74: -1782165986
+      assault_75: 271267711
+      assault_76: 1164102232
+      assault_77: 742205505
+      assault_78: -622174075
+      assault_79: -110202892
+      assault_8: -57770076
+      assault_80: -1801658710
+      assault_81: -1660717392
+      assault_82: 1941156040
+      assault_83: 1150349107
+      assault_84: 915931548
+      assault_85: -280008351
+      assault_86: -1727383551
+      assault_87: -521138139
+      assault_88: 1161812507
+      assault_89: 111735530
+      assault_9: 1624686524
+      assault_90: -328314020
+      assault_91: -1262151427
+      assault_92: 1282221861
+      assault_93: 572320865
+      assault_94: -1239647894
+      assault_95: 258914497
+      assault_96: 1573016164
+      assault_97: -1370817321
+      assault_98: -1274648614
+      assault_99: -1540918051
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

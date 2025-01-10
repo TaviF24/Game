@@ -8,7 +8,7 @@ public abstract class BaseState
     public GunEnemy gunEnemy;
     public StateMachine stateMachine;
 
-    public static GameObject gameObject;
+    public GameObject gameObject;
 
     public void SetGameObject(GameObject go)
     {

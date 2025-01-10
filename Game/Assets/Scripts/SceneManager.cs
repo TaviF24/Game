@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class SceneManager : MonoBehaviour
 {
     public static SceneManager instance;
-    public Vector3 targetPosition = new Vector3(0,6,0);
+    [SerializeField] public Vector3 targetPosition = new Vector3(0,6,0);
     [SerializeField] Animator transitionAnim;
 
     private void Awake()
@@ -20,13 +20,12 @@ public class SceneManager : MonoBehaviour
         else if (instance != this)
         {
             Destroy(gameObject);
-        }
-       
-        
+        } 
     }
 
     public void NextScene(string sceneName)
     {
+        SaveProgressManager.instance.SaveGame();
         StartCoroutine(LoadScene(sceneName));
     }
 
