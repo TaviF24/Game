@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 273434409}
   - component: {fileID: 273434408}
   - component: {fileID: 273434413}
+  - component: {fileID: 273434414}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -236,6 +237,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8da0c194b6b0d084697c8e9d884d1de7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &273434414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273434407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa611ba6e3a6524db51227976f3e745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerGiveEnemyLastKnownPosWhileAssault: 20
+  timerLastSpottedTimeout: 61
 --- !u!1 &359807642
 GameObject:
   m_ObjectHideFlags: 0
