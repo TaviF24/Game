@@ -131,6 +131,13 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IDataPersistence
         SceneManager.instance.NextScene(nextScene);
         RestoreHealth();
 
+        DetectionManager.instance.alreadyDetected = false;
+        DetectionManager.instance.anticipation = false;
+        DetectionManager.instance.assault = false;
+
+        GameManager.instance.player.GetComponent<PlayerUI>().ActivateAnticipationHUD(false);
+        GameManager.instance.player.GetComponent<PlayerUI>().ActivateAssaultHUD(false);
+
         playerShoot.BlockShooting(false);
         deathScreen.SetActive(false); // hide death screen
     }
