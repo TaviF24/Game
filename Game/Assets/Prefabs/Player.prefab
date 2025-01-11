@@ -371,7 +371,6 @@ GameObject:
   - component: {fileID: 4359168554077104940}
   - component: {fileID: 4369873117691699308}
   - component: {fileID: 7366426819597336841}
-  - component: {fileID: 4769286760948014532}
   m_Layer: 5
   m_Name: PlayerUI
   m_TagString: Untagged
@@ -472,21 +471,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &4769286760948014532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1544007876949396213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 225a9636b84ca324d80b7ec496518b82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  assaultHUD: {fileID: 0}
-  anticipationHUD: {fileID: 0}
-  checkAfterReset: 0
 --- !u!1 &2132179465032276891
 GameObject:
   m_ObjectHideFlags: 0
@@ -7747,6 +7731,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptText: {fileID: 1627155795273094701}
+  assaultHUD: {fileID: 3512286759471281163}
+  anticipationHUD: {fileID: 5661276279164767619}
 --- !u!114 &8900405580405040291
 MonoBehaviour:
   m_ObjectHideFlags: 0

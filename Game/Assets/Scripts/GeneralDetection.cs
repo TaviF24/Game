@@ -24,7 +24,6 @@ public class GeneralDetection : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             timeGiveEnemyLastKnownPosWhileAssault = 0f;
             timeSinceLastSpotted = 0f;
-            isAssault = false;
         }
         else if (instance != this)
         {
@@ -34,16 +33,10 @@ public class GeneralDetection : MonoBehaviour
         spawningSystem = FindObjectOfType<SpawningSystem>();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
-        if (isAssault)
+        if (DetectionManager.instance.alreadyDetected)
         {
             if (timeGiveEnemyLastKnownPosWhileAssault > timerGiveEnemyLastKnownPosWhileAssault)
             {
@@ -55,7 +48,7 @@ public class GeneralDetection : MonoBehaviour
             if (timeSinceLastSpotted > timerLastSpottedTimeout)
             {
                 //Debug.Log("CLEAR NOT SPOTTED in some time");
-                isAssault = false;
+                //DetectionManager.instance.alreadyDetected = false;
             }
 
             timeGiveEnemyLastKnownPosWhileAssault += Time.deltaTime;
@@ -66,7 +59,7 @@ public class GeneralDetection : MonoBehaviour
     public void TriggerAssault_GiveEnemyLastKnownPos()
     {
         SetEnemiesToPatrolState();
-        isAssault = true;
+        DetectionManager.instance.alreadyDetected = true;
         timeSinceLastSpotted = 0f;
     }
 

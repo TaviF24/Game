@@ -179,6 +179,8 @@ MonoBehaviour:
   concealmentHUDImage: {fileID: 0}
   beep: {fileID: 999505736900366684}
   detected: {fileID: 4787920720897048399}
+  activeCameras: 0
+  checkAfterReset: 0
 --- !u!1 &4324719805575528892
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,13 +299,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7198bc394fc5bd498ead88f303c478f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 735773697138713288, guid: 6d7facbfde2f9354fa692b22e003bebe, type: 3}
+  player: {fileID: 0}
   max_dist: 10
   fov: 60
   beep: {fileID: 999505736900366684}
   detected: {fileID: 4787920720897048399}
   DetectionManager: {fileID: 7446529958484218643}
-  triggerLoud: {fileID: 0}
 --- !u!1 &6058153959501551393
 GameObject:
   m_ObjectHideFlags: 0

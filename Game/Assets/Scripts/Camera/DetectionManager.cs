@@ -9,17 +9,15 @@ public class DetectionManager : MonoBehaviour, IDataPersistence
     public static DetectionManager instance;
     public int concealment = 0;
     public int maxConcealment = 100;
-    public bool alreadyDetected = false;
+    public bool alreadyDetected;
 
     public TextMeshProUGUI concealmentHUDText;
     public Image concealmentHUDImage;
 
-    public AudioSource beep, detected;
     public int activeCameras = 0;
 
     private bool anticipation, assault;
     private float timeInAnticipation;
-    public GameObject assaultHUD, anticipationHUD;
     public bool checkAfterReset = false;
 
     public void LoadData(GameData gameData)
@@ -29,6 +27,7 @@ public class DetectionManager : MonoBehaviour, IDataPersistence
         anticipation = gameData.anticipation;
         assault = gameData.assault;
         timeInAnticipation = gameData.timeInAnticipation;
+        alreadyDetected = gameData.detected;
     }
 
     public void SaveData(ref GameData gameData)
@@ -39,6 +38,7 @@ public class DetectionManager : MonoBehaviour, IDataPersistence
         gameData.anticipation = anticipation;
         gameData.assault = assault;
         gameData.timeInAnticipation = timeInAnticipation;
+        gameData.detected = alreadyDetected;
     }
     private void Awake()
     {
@@ -48,7 +48,7 @@ public class DetectionManager : MonoBehaviour, IDataPersistence
             DontDestroyOnLoad(gameObject);
             Debug.Log("DetectionManager instance created.");
         }
-        else
+        else if (instance != this)
         {
             Debug.Log("Duplicate DetectionManager instance destroyed.");
             Destroy(gameObject);
@@ -63,19 +63,20 @@ public class DetectionManager : MonoBehaviour, IDataPersistence
     }
     private void check()
     {
-        Debug.Log("Detected: " + alreadyDetected + " Anticipation" + anticipation + " Assault" + assault + " timeinanticipation" + timeInAnticipation);
+        //Debug.Log("Detected: " + alreadyDetected + " Anticipation" + anticipation + " Assault" + assault + " timeinanticipation" + timeInAnticipation);
         if (alreadyDetected)
         {
             if (!anticipation && !assault)
                 StartAnticipation();
             else if (anticipation && !assault)
             {
-                Debug.Log("Anticipation");
+                //Debug.Log("Anticipation");
                 if(!checkAfterReset)
                 {
-                    Debug.Log("Checked after reset");
+                    //Debug.Log("Checked after reset");
                     checkAfterReset = true;
-                    ShowHUD(anticipationHUD, assaultHUD);
+                    GameManager.instance.player.GetComponent<PlayerUI>().ActivateAnticipationHUD(true);
+                    GameManager.instance.player.GetComponent<PlayerUI>().ActivateAssaultHUD(false);
                 }    
                 if (timeInAnticipation > 30f){
                     StartAssault();
@@ -85,7 +86,10 @@ public class DetectionManager : MonoBehaviour, IDataPersistence
             }
         }
         if (assault && !checkAfterReset)
-            ShowHUD(assaultHUD, anticipationHUD);
+        {
+            GameManager.instance.player.GetComponent<PlayerUI>().ActivateAssaultHUD(true);
+            GameManager.instance.player.GetComponent<PlayerUI>().ActivateAnticipationHUD(false);
+        }
         
     }
 
@@ -94,7 +98,9 @@ public class DetectionManager : MonoBehaviour, IDataPersistence
         anticipation = true;
         timeInAnticipation = 0f;
         Debug.Log("Starting Anticipation");
-        ShowHUD(anticipationHUD, assaultHUD);
+        GameManager.instance.player.GetComponent<PlayerUI>().ActivateAnticipationHUD(true);
+        GameManager.instance.player.GetComponent<PlayerUI>().ActivateAssaultHUD(false);
+
 
         GeneralDetection.instance.TriggerAssault_GiveEnemyLastKnownPos();
     }
@@ -103,7 +109,8 @@ public class DetectionManager : MonoBehaviour, IDataPersistence
     {
         assault = true;
         anticipation = false;
-        ShowHUD(assaultHUD, anticipationHUD);
+        GameManager.instance.player.GetComponent<PlayerUI>().ActivateAssaultHUD(true);
+        GameManager.instance.player.GetComponent<PlayerUI>().ActivateAnticipationHUD(false);
 
         GeneralDetection.instance.TriggerAssault_GiveEnemyLastKnownPos();
     }
@@ -112,18 +119,8 @@ public class DetectionManager : MonoBehaviour, IDataPersistence
         alreadyDetected = true;
         check();
     }
-    private void ShowHUD(GameObject toEnable, GameObject toDisable)
-    {
-        if (!toEnable.activeSelf)
-        {
-            toEnable.SetActive(true);
-        }
-        if (toDisable.activeSelf)
-        {
-            toDisable.SetActive(false);
-        }
-    }
-    public void updateGlobalConcealment(int val)
+
+    public void updateGlobalConcealment(int val, AudioSource beep, AudioSource detected)
     {
         concealment = Mathf.Clamp(concealment + val, 0, maxConcealment);
 
@@ -133,7 +130,7 @@ public class DetectionManager : MonoBehaviour, IDataPersistence
             concealmentHUDImage.fillAmount = (float)concealment / maxConcealment;
 
         if (concealment >= maxConcealment && !alreadyDetected)
-            Detected();
+            Detected(detected);
 
         float beepInterval = Mathf.Lerp(0.15f, 0.05f, concealment / 100f);
         if (concealment % Mathf.RoundToInt(beepInterval * 100) == 0 && concealment != 0)
@@ -143,7 +140,7 @@ public class DetectionManager : MonoBehaviour, IDataPersistence
         }
     }
 
-    public void Detected()
+    public void Detected(AudioSource detected)
     {
         alreadyDetected = true;
         detected.volume = 0.1f;
