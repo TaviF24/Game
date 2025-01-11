@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 273434408}
   - component: {fileID: 273434413}
   - component: {fileID: 273434414}
+  - component: {fileID: 273434415}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -251,6 +252,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerGiveEnemyLastKnownPosWhileAssault: 20
   timerLastSpottedTimeout: 61
+--- !u!114 &273434415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273434407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e97ecadaee413c458cbca20d3f36071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  concealment: 0
+  maxConcealment: 100
+  alreadyDetected: 0
+  concealmentHUDText: {fileID: 629828000}
+  concealmentHUDImage: {fileID: 629827999}
+  activeCameras: 0
+  checkAfterReset: 0
 --- !u!1 &359807642
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,6 +516,30 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d7facbfde2f9354fa692b22e003bebe, type: 3}
+--- !u!114 &629827999 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6846718310912084291, guid: 6d7facbfde2f9354fa692b22e003bebe,
+    type: 3}
+  m_PrefabInstance: {fileID: 629827998}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &629828000 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1838330809510457936, guid: 6d7facbfde2f9354fa692b22e003bebe,
+    type: 3}
+  m_PrefabInstance: {fileID: 629827998}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &849428831
 GameObject:
   m_ObjectHideFlags: 0

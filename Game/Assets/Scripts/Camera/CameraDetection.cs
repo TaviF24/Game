@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-public class CameraDetection : MonoBehaviour, IDataPersistence
+public class CameraDetection : MonoBehaviour
 {
 
     public Transform player;
@@ -12,21 +12,9 @@ public class CameraDetection : MonoBehaviour, IDataPersistence
     public AudioSource beep, detected;
     private Coroutine loseDetection;
     private Coroutine addDetection;
-    public DetectionManager DetectionManager;
-
-
 
     private bool isDetectingPlayer = false;
 
-    public void LoadData(GameData data)
-    {
-        DetectionManager.instance.alreadyDetected = data.detected;
-    }
-
-    public void SaveData(ref GameData data)
-    {
-        data.detected = DetectionManager.instance.alreadyDetected;
-    }
     void Update()
     {
         if (DetectionManager.instance.concealment >= 100 || DetectionManager.instance.alreadyDetected)
@@ -56,7 +44,7 @@ public class CameraDetection : MonoBehaviour, IDataPersistence
 
     bool IsPlayerDetected()
     {
-        Vector3 directionPlayer = player.position - transform.position;
+        Vector3 directionPlayer = GameManager.instance.player.transform.position - transform.position;
         float distToPlayer = directionPlayer.magnitude;
         if (distToPlayer > max_dist)
             return false;
@@ -65,7 +53,7 @@ public class CameraDetection : MonoBehaviour, IDataPersistence
         RaycastHit hit;
         if (Physics.Raycast(transform.position, directionPlayer, out hit, max_dist))
         
-            return hit.transform == player;
+            return hit.transform == GameManager.instance.player.transform;
         
         return false;
     }
@@ -95,7 +83,7 @@ public class CameraDetection : MonoBehaviour, IDataPersistence
         while (!DetectionManager.instance.alreadyDetected)
         {
             yield return new WaitForSeconds(0.025f);
-            DetectionManager.instance.updateGlobalConcealment(1);
+            DetectionManager.instance.updateGlobalConcealment(1, beep, detected);
         }
     }
 
@@ -104,7 +92,7 @@ public class CameraDetection : MonoBehaviour, IDataPersistence
         while (!DetectionManager.instance.alreadyDetected && !DetectionManager.instance.isAnyCameraDetecting())
         {
             yield return new WaitForSeconds(0.03f);
-            DetectionManager.instance.updateGlobalConcealment(-1);
+            DetectionManager.instance.updateGlobalConcealment(-1, beep, detected);
         }
     }
 
