@@ -65,29 +65,34 @@ public class GeneralDetection : MonoBehaviour
 
     public void SetEnemiesToPatrolState()
     {
-        if (spawningSystem == null) // ????????
-        {
-            spawningSystem = FindObjectOfType<SpawningSystem>();
-        }
+        EnsureSpawningSystemIsInitialized();
         if (spawningSystem != null && spawningSystem.pool != null)
         {
             foreach (var enemy in spawningSystem.pool.getActiveObjects())
             {
-                Enemy enemyScript = enemy.GetComponent<Enemy>();
-                if (enemyScript != null)
-                {
-                    // set enemy to search state
-                    StateMachine stateMachine = enemyScript.GetComponent<StateMachine>();
-                    if (stateMachine != null)
-                    {
-                        if (stateMachine.activeState.GetType() != typeof(AttackState)) // don't overwrite AttackState
-                        {
-                            stateMachine.ChangeState(new SearchState());
+                SetEnemyToSearchState(enemy);
+            }
+        }
+    }
 
-                            enemyScript.LastKnownPos = player.transform.position;
-                        }
-                    }
-                }
+    private void EnsureSpawningSystemIsInitialized()
+    {
+        if (spawningSystem == null)
+        {
+            spawningSystem = FindObjectOfType<SpawningSystem>();
+        }
+    }
+
+    private void SetEnemyToSearchState(GameObject enemy)
+    {
+        Enemy enemyScript = enemy.GetComponent<Enemy>();
+        if (enemyScript != null)
+        {
+            StateMachine stateMachine = enemyScript.GetComponent<StateMachine>();
+            if (stateMachine != null && stateMachine.activeState.GetType() != typeof(AttackState))
+            {
+                stateMachine.ChangeState(new SearchState());
+                enemyScript.LastKnownPos = player.transform.position;
             }
         }
     }

@@ -16,7 +16,7 @@ public class DetectionManager : MonoBehaviour, IDataPersistence
 
     public int activeCameras = 0;
 
-    private bool anticipation, assault;
+    public bool anticipation, assault;
     private float timeInAnticipation;
     public bool checkAfterReset = false;
 
