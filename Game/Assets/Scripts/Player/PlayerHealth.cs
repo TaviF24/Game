@@ -29,8 +29,9 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IDataPersistence
     public Vector3 targetPosition;
     public string nextScene;
 
-
     private PlayerShoot playerShoot;
+
+	private float timeSinceLastDamage = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -57,7 +58,16 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IDataPersistence
 		health = Mathf.Clamp(health, 0, maxHealth);
 		UpdateHealthUI();
 
-		if (overlay.color.a > 0)
+        timeSinceLastDamage += Time.deltaTime;
+        //Debug.Log(timeSinceLastDamage);
+        if (timeSinceLastDamage >= 30 && health < maxHealth)
+        {
+            //Debug.Log("autoheal");
+            RestoreHealth(10);
+            timeSinceLastDamage = 20;
+        }
+
+        if (overlay.color.a > 0)
 		{
 			// don't fade out the overlay if the player is low on health
 			if (health < 30)
@@ -74,7 +84,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IDataPersistence
 				overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, tempAlpha);
 			}
 		}
-	}
+    }
 
 	public void UpdateHealthUI()
 	{       
@@ -105,8 +115,9 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IDataPersistence
 	}
 
 	public void TakeDamage(float damage)
-	{
+	{        
 		health -= damage;
+		timeSinceLastDamage = 0;
 		lerpTimer = 0;
 		UpdateHealthUI();
 		durationTimer = 0;
@@ -129,7 +140,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IDataPersistence
 
         SceneManager.instance.targetPosition = targetPosition;
         SceneManager.instance.NextScene(nextScene);
-        RestoreHealth();
+        RestoreHealth(maxHealth);
 
         DetectionManager.instance.alreadyDetected = false;
         DetectionManager.instance.anticipation = false;
@@ -142,9 +153,16 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IDataPersistence
         deathScreen.SetActive(false); // hide death screen
     }
 
-    public void RestoreHealth()
+	public void RestoreHealth(float healthToRestore)
 	{
-		health = maxHealth;
+		if (healthToRestore + health > maxHealth)
+		{
+			health = maxHealth;
+		}
+		else
+		{
+			health += healthToRestore;
+		}
 		lerpTimer = 0;
 		UpdateHealthUI();
 	}

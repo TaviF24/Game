@@ -222,8 +222,7 @@ GameObject:
   - component: {fileID: 7851372396608176459}
   - component: {fileID: 1019592709529188446}
   - component: {fileID: 1317398315042628818}
-  - component: {fileID: 2295645589852871789}
-  - component: {fileID: 1869474955669255305}
+  - component: {fileID: 1809323950305977603}
   m_Layer: 6
   m_Name: HealCube
   m_TagString: Untagged
@@ -317,7 +316,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2295645589852871789
+--- !u!114 &1809323950305977603
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -326,38 +325,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 543913848358574269}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7997aeb02ad5bb40b08f303c257140a, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f69631f5885cf043b7805cd497152c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useEvents: 1
-  promptMessage: Heal Player
---- !u!114 &1869474955669255305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 543913848358574269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05f9ee304bd21d541aa534850cb84ecd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnInteract:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerHealth, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 15
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  useEvents: 0
+  promptMessage: Heal
 --- !u!1 &572756726722609658
 GameObject:
   m_ObjectHideFlags: 0
@@ -2226,7 +2198,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2800bac343f57843b52452930f6ff2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: demo_city_night
+  sceneName: InsideVan
+  pos: {x: 94.46745, y: 5.52, z: -80.13635}
 --- !u!1 &5530196354869153335
 GameObject:
   m_ObjectHideFlags: 0
@@ -3077,9 +3050,10 @@ MonoBehaviour:
   OnInteract:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8900405580405040291, guid: 6d7facbfde2f9354fa692b22e003bebe,
+          type: 3}
         m_TargetAssemblyTypeName: PlayerHealth, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: TakeDamage
         m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
