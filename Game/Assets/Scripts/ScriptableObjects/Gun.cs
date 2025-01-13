@@ -30,6 +30,8 @@ public class Gun : MonoBehaviour
     AudioSource audioSource;
     Sound sound = new Sound(Vector3.zero, 20f);
 
+    public LayerMask layerToIgnore;
+
     private void Start()
     {
         player = GameManager.instance.player;
@@ -93,7 +95,7 @@ public class Gun : MonoBehaviour
 
                 Ray ray = new Ray(camera.transform.position, camera.transform.forward);
                 Debug.DrawRay(ray.origin, ray.direction * gunData.maxDistance, Color.blue);
-                if (Physics.Raycast(ray, out RaycastHit hitInfo, gunData.maxDistance))
+                if (Physics.Raycast(ray, out RaycastHit hitInfo, gunData.maxDistance, ~layerToIgnore))
                 {
                     //Debug.Log(hitInfo.transform.name);
                     shotDirection = (hitInfo.point - gunBarrel.transform.position).normalized;

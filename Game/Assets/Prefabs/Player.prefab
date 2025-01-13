@@ -2600,6 +2600,9 @@ MonoBehaviour:
   reloadSound: {fileID: 8300000, guid: 46bb3b7aca6a87547b40741fe8b1cfeb, type: 3}
   isInsideWall1: 0
   isInsideWall2: 0
+  layerToIgnore:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!82 &6238065289797285769
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10307,7 +10310,7 @@ GameObject:
   - component: {fileID: 4461761265176171054}
   - component: {fileID: 8437698033512033434}
   - component: {fileID: 3512071924016444329}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
