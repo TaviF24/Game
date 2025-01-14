@@ -6,11 +6,10 @@ public class NextScene : MonoBehaviour
 {
     public string sceneName;
     public Vector3 pos;
-    public bool isLocked = false;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && !isLocked)
+        if (other.CompareTag("Player"))
         {
             SceneManager.instance.targetPosition = pos;
             SceneManager.instance.NextScene(sceneName);

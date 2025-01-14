@@ -8,6 +8,7 @@ public class PlayerUI : MonoBehaviour
 	[SerializeField]
 	private TextMeshProUGUI promptText;
     public GameObject assaultHUD, anticipationHUD;
+    public GameObject finishScreen;
     // Start is called before the first frame update
     void Start()
     {
