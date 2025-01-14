@@ -3,17 +3,29 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class MoneyCollection : MonoBehaviour
+public class MoneyCollection : MonoBehaviour, IDataPersistence
 {
     [SerializeField]
     public TextMeshProUGUI viewCount;
-    private int Money = 0;
+    public int money = 0;
+
+    public void LoadData(GameData gameData)
+    {
+        money = gameData.collectedMoney;
+        viewCount.text = money.ToString() + " $";
+    }
+
+    public void SaveData(ref GameData gameData)
+    {
+        gameData.collectedMoney = money;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag == "money")
         {
-            Money=Money+10000;
-            viewCount.text = Money.ToString()+ " $";
+            money=money+10000;
+            viewCount.text = money.ToString()+ " $";
             Destroy(other.gameObject);
         }
     }

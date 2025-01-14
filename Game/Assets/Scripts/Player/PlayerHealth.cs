@@ -149,6 +149,9 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IDataPersistence
         GameManager.instance.player.GetComponent<PlayerUI>().ActivateAnticipationHUD(false);
         GameManager.instance.player.GetComponent<PlayerUI>().ActivateAssaultHUD(false);
 
+		gameObject.GetComponent<MoneyCollection>().money = 0;
+		gameObject.GetComponent<MoneyCollection>().viewCount.text = 0 + " $";
+
         playerShoot.BlockShooting(false);
         deathScreen.SetActive(false); // hide death screen
     }

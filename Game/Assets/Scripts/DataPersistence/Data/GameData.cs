@@ -10,6 +10,7 @@ public class GameData
     public string lastScene;
     public bool detected, anticipation, assault;
     public float timeInAnticipation;
+    public int collectedMoney;
 
     public GameData()
     {
@@ -20,5 +21,6 @@ public class GameData
         anticipation = false;
         assault = false;
         timeInAnticipation = 0f;
+        collectedMoney = 0;
     }
 }
