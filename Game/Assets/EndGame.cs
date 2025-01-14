@@ -11,7 +11,7 @@ public class EndGame : MonoBehaviour
 
     void Update()
     {
-        if(GameManager.instance.player.GetComponent<MoneyCollection>().money >= 100000)
+        if(GameManager.instance.player.GetComponent<MoneyCollection>().money >= 300000)
         {
             gameObject.GetComponent<NextScene>().isLocked = false;
         }
