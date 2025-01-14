@@ -31,7 +31,7 @@ public class EndGame : Interactable
 
     protected override void Interact()
     {
-        if (isLocked)
+        if (!isLocked)
         {
             GameManager.instance.player.GetComponent<PlayerUI>().finishScreen.SetActive(true);
             screenIsOn = true;
