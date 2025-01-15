@@ -3080,6 +3080,11 @@ MonoBehaviour:
   layerToIgnore:
     serializedVersion: 2
     m_Bits: 1024
+  currentRecoilXPos: 0
+  currentRecoilYPos: 0
+  recoilAmountY: 2.8
+  recoilAmountX: 2.8
+  maxRecoilTime: 3
 --- !u!82 &6238065289797285769
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11297,6 +11302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26d3ce8cfd1f3b14197e32c62c10f45f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timePressed: 0
 --- !u!114 &1221280837735371922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11326,8 +11332,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 5122418930328566297}
+  xRotation: 0
   xSensitivity: 10
   ySensitivity: 10
+  smoothTime: 0.055
+  targetYRotation: 0
 --- !u!114 &1268926601011197855
 MonoBehaviour:
   m_ObjectHideFlags: 0

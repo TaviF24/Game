@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.584, y: 1.97}
+  m_AnchoredPosition: {x: 0.584, y: 1.82}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3704397
@@ -181,11 +181,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "-There are enemies, when they see you they will attack you;\n-The enemies
-    can hear you if you shot;\n-There are two game modes: Stealth and Rampage;\n-You
-    start by default in Stealth; \n-Once the enemies (or the cameras) saw you, the
-    game mode is changed to Rampage;\n-In Rampage mode, the enemies know your position
-    and will come after you;\n-Try not to get damage for 30 sec and you will start
-    to heal. "
+    can hear you if you shot;\n-You can eliminate the enemies without shooting;\n-There
+    are two game modes: Stealth and Rampage;\n-You start by default in Stealth; \n-Once
+    the enemies (or the cameras) saw you, the game mode is changed to Rampage;\n-In
+    Rampage mode, the enemies know your position and will come after you;\n-Try not
+    to get damage for 30 sec and you will start to heal. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
