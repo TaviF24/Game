@@ -6,10 +6,14 @@ public class TestShooting : Interactable, IDamageable
 {
     Renderer renderer;
     Rigidbody rb;
+    Vector3 initialPos;
+    Quaternion initialRot;
     private void Start()
     {
         renderer = GetComponent<Renderer>();
         rb = GetComponent<Rigidbody>();
+        initialPos = transform.position;
+        initialRot = transform.rotation;
     }
 
     public void TakeDamage(float damage)
@@ -37,6 +41,8 @@ public class TestShooting : Interactable, IDamageable
         if (renderer != null)
         {
             renderer.material.color = new Color(255, 255, 255);
+            transform.position = initialPos;
+            transform.rotation = initialRot;
         }
         else
         {

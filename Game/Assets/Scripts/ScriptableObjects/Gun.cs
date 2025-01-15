@@ -28,7 +28,7 @@ public class Gun : MonoBehaviour
     Animator weaponAnimator;
     Animator magAnimator;
     AudioSource audioSource;
-    Sound sound = new Sound(Vector3.zero, 20f);
+    Sound sound = new Sound(Vector3.zero, 25f);
 
     public LayerMask layerToIgnore;
 
@@ -108,7 +108,7 @@ public class Gun : MonoBehaviour
                 if (!isInsideWall1 && !isInsideWall2)
                 {
                     newBullet.SetActive(true);
-                    newBullet.GetComponent<Rigidbody>().velocity = shotDirection * 80;
+                    newBullet.GetComponent<Rigidbody>().velocity = shotDirection * 100;
                 }
 
                 muzzleFlash.Play();

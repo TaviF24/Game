@@ -1361,7 +1361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useEvents: 0
-  promptMessage: Set the color to white (Press E)
+  promptMessage: Reset (Press E)
 --- !u!65 &621636594
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2101,7 +2101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useEvents: 0
-  promptMessage: Set the color to white (Press E)
+  promptMessage: Reset (Press E)
 --- !u!65 &957964137
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3042,7 +3042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useEvents: 0
-  promptMessage: Set the color to white (Press E)
+  promptMessage: Reset (Press E)
 --- !u!65 &1932617303
 BoxCollider:
   m_ObjectHideFlags: 0
