@@ -3154,8 +3154,8 @@ MonoBehaviour:
     m_Bits: 1024
   currentRecoilXPos: 0
   currentRecoilYPos: 0
-  recoilAmountY: 2.8
-  recoilAmountX: 2.8
+  recoilAmountY: 3
+  recoilAmountX: 3
   maxRecoilTime: 3
 --- !u!82 &6238065289797285769
 AudioSource:
