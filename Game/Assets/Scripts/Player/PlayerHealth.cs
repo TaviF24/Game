@@ -133,14 +133,14 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IDataPersistence
     private IEnumerator HandleDeath()
     {
 		playerShoot = GetComponent<PlayerShoot>();
-
-		playerShoot.BlockShooting(true);
+        //Time.timeScale = 0;
+        playerShoot.BlockShooting(true);
         deathScreen.SetActive(true); // show death screen
         yield return new WaitForSeconds(deathScreenDuration);
-
+		//Time.timeScale = 1;
         SceneManager.instance.targetPosition = targetPosition;
         SceneManager.instance.NextScene(nextScene);
-        RestoreHealth(maxHealth);
+        
 
         DetectionManager.instance.alreadyDetected = false;
         DetectionManager.instance.anticipation = false;
@@ -151,9 +151,10 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IDataPersistence
 
 		gameObject.GetComponent<MoneyCollection>().money = 0;
 		gameObject.GetComponent<MoneyCollection>().viewCount.text = 0 + " $";
-
+		RestoreHealth(maxHealth);
         playerShoot.BlockShooting(false);
         deathScreen.SetActive(false); // hide death screen
+
     }
 
 	public void RestoreHealth(float healthToRestore)
