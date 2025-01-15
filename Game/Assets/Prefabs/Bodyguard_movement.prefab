@@ -5520,6 +5520,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bodyguard_movement
       objectReference: {fileID: 0}
+    - target: {fileID: 100154, guid: 69e0bf832ba8212478b45616cc569f75, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 69e0bf832ba8212478b45616cc569f75, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.7763555e-15
@@ -7032,6 +7036,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67c6e0257074ca54aa0e6c0e6402f148, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useEvents: 0
+  promptMessage: 
   debugsphere: {fileID: 0}
   path: {fileID: 0}
   sightDistance: 25

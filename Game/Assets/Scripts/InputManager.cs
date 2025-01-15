@@ -13,6 +13,7 @@ public class InputManager : MonoBehaviour
     private PlayerLook look;
     private PlayerShoot shoot;
     private bool heldShooting = false;
+    public float timePressed = 0f;
 
     void Awake()
     {
@@ -48,6 +49,11 @@ public class InputManager : MonoBehaviour
         if (heldShooting)
         {
             shoot.Shoot();
+            timePressed += Time.deltaTime;
+        }
+        else
+        {
+            timePressed = 0f;
         }
     }
 

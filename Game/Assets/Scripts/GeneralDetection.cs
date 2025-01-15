@@ -7,7 +7,7 @@ public class GeneralDetection : MonoBehaviour
     public static GeneralDetection instance { get; private set; }
 
     private GameObject player;
-    private SpawningSystem spawningSystem;
+    private SpawningSystem[] spawningSystems;
     private float timeGiveEnemyLastKnownPosWhileAssault;
     private bool isAssault;
 
@@ -30,7 +30,7 @@ public class GeneralDetection : MonoBehaviour
             Destroy(gameObject);
         }
         player = GameManager.instance.player;
-        spawningSystem = FindObjectOfType<SpawningSystem>();
+        spawningSystems = FindObjectsOfType<SpawningSystem>();
     }
 
     // Update is called once per frame
@@ -66,21 +66,24 @@ public class GeneralDetection : MonoBehaviour
     public void SetEnemiesToPatrolState()
     {
         EnsureSpawningSystemIsInitialized();
-        if (spawningSystem != null && spawningSystem.pool != null)
-        {
-            foreach (var enemy in spawningSystem.pool.getActiveObjects())
+        foreach (var spawningSystem in spawningSystems) 
+        { 
+            if (spawningSystem != null && spawningSystem.pool != null)
             {
-                SetEnemyToSearchState(enemy);
+                foreach (var enemy in spawningSystem.pool.getActiveObjects())
+                {
+                    SetEnemyToSearchState(enemy);
+                }
             }
-        }
+        } 
     }
 
     private void EnsureSpawningSystemIsInitialized()
     {
-        if (spawningSystem == null)
-        {
-            spawningSystem = FindObjectOfType<SpawningSystem>();
-        }
+        //if (spawningSystems == null)
+        //{
+            spawningSystems = FindObjectsOfType<SpawningSystem>();
+        //}
     }
 
     private void SetEnemyToSearchState(GameObject enemy)

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour, IHear
+public class Enemy : Interactable, IHear
 {
     private StateMachine stateMachine;
     private NavMeshAgent agent;
@@ -75,8 +75,15 @@ public class Enemy : MonoBehaviour, IHear
             }
         }
 
-        CanSeePlayer();
-        currentState=stateMachine.activeState.ToString();
+        if (CanSeePlayer())
+        {
+            promptMessage = "";
+        }
+        else
+        {
+            promptMessage = "Assassinate";
+        }
+        currentState =stateMachine.activeState.ToString();
         debugsphere.transform.position = lastKnownPos;
     }
 
@@ -122,6 +129,14 @@ public class Enemy : MonoBehaviour, IHear
         {
             //change to Attacktate if you want the npc to move a little slower and to not come instantly to the sound source
             stateMachine.ChangeState(new SearchState());
+        }
+    }
+
+    protected override void Interact()
+    {
+        if (!CanSeePlayer()) 
+        {
+            GetComponent<EnemyHealth>().TakeDamage(100);
         }
     }
 }

@@ -28,7 +28,15 @@ public class Gun : MonoBehaviour
     Animator weaponAnimator;
     Animator magAnimator;
     AudioSource audioSource;
-    Sound sound = new Sound(Vector3.zero, 20f);
+    Sound sound = new Sound(Vector3.zero, 25f);
+
+    public LayerMask layerToIgnore;
+
+    public float currentRecoilXPos;
+    public float currentRecoilYPos;
+    [Range(0, 7f)] public float recoilAmountY;
+    [Range(0,7f)] public float recoilAmountX;
+    [Range(0, 10f)] public float maxRecoilTime = 4;
 
     private void Start()
     {
@@ -93,7 +101,7 @@ public class Gun : MonoBehaviour
 
                 Ray ray = new Ray(camera.transform.position, camera.transform.forward);
                 Debug.DrawRay(ray.origin, ray.direction * gunData.maxDistance, Color.blue);
-                if (Physics.Raycast(ray, out RaycastHit hitInfo, gunData.maxDistance))
+                if (Physics.Raycast(ray, out RaycastHit hitInfo, gunData.maxDistance, ~layerToIgnore))
                 {
                     //Debug.Log(hitInfo.transform.name);
                     shotDirection = (hitInfo.point - gunBarrel.transform.position).normalized;
@@ -106,7 +114,7 @@ public class Gun : MonoBehaviour
                 if (!isInsideWall1 && !isInsideWall2)
                 {
                     newBullet.SetActive(true);
-                    newBullet.GetComponent<Rigidbody>().velocity = shotDirection * 80;
+                    newBullet.GetComponent<Rigidbody>().velocity = shotDirection * 100;
                 }
 
                 muzzleFlash.Play();
@@ -115,7 +123,9 @@ public class Gun : MonoBehaviour
                 AudioManager.instance.PlayOneShot(shotSound, audioSource);
                 sound.position = gunBarrel.position;
                 MakeSounds.MakeNoise(sound);
-                
+
+                RecoilMath();
+
                 gunData.currentAmo--;
                 timeSinceLastShot = 0f;
 
@@ -141,6 +151,14 @@ public class Gun : MonoBehaviour
             StartCoroutine(Reload());
         }
     }
+
+    public void RecoilMath()
+    {
+        currentRecoilXPos = ((UnityEngine.Random.value - .5f) / 2) * recoilAmountX;
+        currentRecoilYPos = ((UnityEngine.Random.value - .5f) / 2) * (player.GetComponent<InputManager>().timePressed >= maxRecoilTime ? recoilAmountY / 4 : recoilAmountY);
+        player.GetComponent<PlayerLook>().xRotation -= Mathf.Abs(currentRecoilYPos);
+        player.GetComponent<PlayerLook>().targetYRotation -= currentRecoilXPos;
+    }
     
     private IEnumerator Reload()
     {
@@ -151,6 +169,7 @@ public class Gun : MonoBehaviour
         yield return new WaitForSeconds(gunData.reloadTime);
         gunData.currentAmo = gunData.magSize;
         gunData.reloading = false;
+        player.GetComponent<InputManager>().timePressed = 0f;
     }
 
 }

@@ -12,13 +12,12 @@ public class PlayerShoot : MonoBehaviour
     {
         viewAmmoCount.text = gun.gunData.currentAmo.ToString();
         gun.Shoot();
-        if(gun.gunData.reloading)
-                viewAmmoCount.text = gun.gunData.magSize.ToString();
     }
 
     public void Reload()
     {
         gun.StartReload();
+        viewAmmoCount.text = gun.gunData.magSize.ToString();
     }
 
     public void BlockShooting(bool isBlockedFromShootingArg)

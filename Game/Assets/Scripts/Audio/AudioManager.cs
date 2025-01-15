@@ -44,19 +44,25 @@ public class AudioManager : MonoBehaviour
 
     public AudioSourcePrefab GetFreeAudioSourceFlag()
     {
-        for (int i = 0; i < audioSourceCount; i++)
+        for (int i = 0; i < audioSources.Count; i++)
         {
-            if (!audioSources[i].audioSource.isPlaying)
+            if (audioSources[i] != null && !audioSources[i].audioSource.isPlaying)
             {
                 return audioSources[i];
             }
         }
+        if(audioSources.Count == 0)
+            return null;
         return audioSources[0];
     }
     
     public void Play(AudioClip audioClip)
     {
+        if (audioSources.Count == 0)
+            return;
         AudioSource audioSource = GetFreeAudioSourceFlag().audioSource;
+        if (audioSource == null)
+            return;
         audioSource.clip = audioClip;
         audioSource.volume = volume;
         audioSource.Play();

@@ -7,14 +7,11 @@ public class MoneyCollection : MonoBehaviour
 {
     [SerializeField]
     public TextMeshProUGUI viewCount;
-    private int Money = 0;
-    private void OnTriggerEnter(Collider other)
+    public int money = 0;
+
+    public void TakeMoney()
     {
-        if (other.transform.tag == "money")
-        {
-            Money=Money+10000;
-            viewCount.text = Money.ToString()+ " $";
-            Destroy(other.gameObject);
-        }
+        money=money+10000;
+        viewCount.text = money.ToString()+ " $";
     }
 }
