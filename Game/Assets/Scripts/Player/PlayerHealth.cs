@@ -21,8 +21,20 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IDataPersistence
 	public float fadeSpeed = 1.5f; // how fast the overlay fades out
 	private float durationTimer;
 
-	// Start is called before the first frame update
-	void Start()
+    [Header("Death Screen")]
+    public GameObject deathScreen;
+    public float deathScreenDuration = 5f; // duration the death screen stays visible
+
+    [Header("On Death Scene Transition")]
+    public Vector3 targetPosition;
+    public string nextScene;
+
+    private PlayerShoot playerShoot;
+
+	private float timeSinceLastDamage = 0f;
+
+    // Start is called before the first frame update
+    void Start()
     {
         if (health < 0) // Initialize only if health has not been set
         {
@@ -37,8 +49,8 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IDataPersistence
             overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 0f);
         }
 
-           
-	}
+        deathScreen.SetActive(false); // death screen is initially hidden
+    }
 
 	// Update is called once per frame
 	void Update()
@@ -46,7 +58,16 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IDataPersistence
 		health = Mathf.Clamp(health, 0, maxHealth);
 		UpdateHealthUI();
 
-		if (overlay.color.a > 0)
+        timeSinceLastDamage += Time.deltaTime;
+        //Debug.Log(timeSinceLastDamage);
+        if (timeSinceLastDamage >= 30 && health < maxHealth)
+        {
+            //Debug.Log("autoheal");
+            RestoreHealth(10);
+            timeSinceLastDamage = 20;
+        }
+
+        if (overlay.color.a > 0)
 		{
 			// don't fade out the overlay if the player is low on health
 			if (health < 30)
@@ -63,7 +84,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IDataPersistence
 				overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, tempAlpha);
 			}
 		}
-	}
+    }
 
 	public void UpdateHealthUI()
 	{       
@@ -94,18 +115,58 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IDataPersistence
 	}
 
 	public void TakeDamage(float damage)
-	{
+	{        
 		health -= damage;
+		timeSinceLastDamage = 0;
 		lerpTimer = 0;
 		UpdateHealthUI();
 		durationTimer = 0;
 		fadeSpeed = 1.5f;
 		overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 1);
-	}
 
-	public void RestoreHealth(float healAmount)
+        if (health <= 0 && !deathScreen.activeInHierarchy)
+        {
+            StartCoroutine(HandleDeath());
+        }
+    }
+
+    private IEnumerator HandleDeath()
+    {
+		playerShoot = GetComponent<PlayerShoot>();
+        //Time.timeScale = 0;
+        playerShoot.BlockShooting(true);
+        deathScreen.SetActive(true); // show death screen
+        yield return new WaitForSeconds(deathScreenDuration);
+		//Time.timeScale = 1;
+        SceneManager.instance.targetPosition = targetPosition;
+        SceneManager.instance.NextScene(nextScene);
+        
+
+        DetectionManager.instance.alreadyDetected = false;
+        DetectionManager.instance.anticipation = false;
+        DetectionManager.instance.assault = false;
+
+        GameManager.instance.player.GetComponent<PlayerUI>().ActivateAnticipationHUD(false);
+        GameManager.instance.player.GetComponent<PlayerUI>().ActivateAssaultHUD(false);
+
+		gameObject.GetComponent<MoneyCollection>().money = 0;
+		gameObject.GetComponent<MoneyCollection>().viewCount.text = 0 + " $";
+		RestoreHealth(maxHealth);
+        playerShoot.BlockShooting(false);
+        deathScreen.SetActive(false); // hide death screen
+
+    }
+
+	public void RestoreHealth(float healthToRestore)
 	{
-		health += healAmount;
+		if (healthToRestore + health > maxHealth)
+		{
+			health = maxHealth;
+		}
+		else
+		{
+			health += healthToRestore;
+		}
 		lerpTimer = 0;
 		UpdateHealthUI();
 	}

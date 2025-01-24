@@ -149,7 +149,7 @@ namespace SlimUI.ModernMenu{
 				case "NewGame":
 					gameData = new GameData();
 					fileDataHandler.Save(gameData);
-                    StartCoroutine(LoadAsynchronously("SampleScene"));
+					StartCoroutine(LoadAsynchronously("SampleScene"));
 					break;
 				case "LoadGame":
 					if(gameData != null)
@@ -158,7 +158,10 @@ namespace SlimUI.ModernMenu{
 					}
 					else
 					{
-                        StartCoroutine(LoadAsynchronously("SampleScene"));
+                        gameData = new GameData();
+                        gameData.playerPosition = new Vector3(94.46f, 5.52f, -80.13f);
+                        fileDataHandler.Save(gameData);
+                        StartCoroutine(LoadAsynchronously("InsideVan"));
                     }
 					break;
 				case "Continue":
@@ -168,7 +171,10 @@ namespace SlimUI.ModernMenu{
 					}
 					else
 					{
-						StartCoroutine(LoadAsynchronously("SampleScene"));
+                        gameData = new GameData();
+                        gameData.playerPosition = new Vector3(94.46f, 5.52f, -80.13f);
+                        fileDataHandler.Save(gameData);
+                        StartCoroutine(LoadAsynchronously("InsideVan"));
 					}
 					break;
 			}

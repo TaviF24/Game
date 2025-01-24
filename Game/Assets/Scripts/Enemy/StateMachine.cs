@@ -17,12 +17,13 @@ public class StateMachine : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        activeState.SetGameObject(gameObject);
+        //activeState.SetGameObject(gameObject);
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         if (activeState != null)
         {
             activeState.Perform();
@@ -43,6 +44,7 @@ public class StateMachine : MonoBehaviour
             activeState.stateMachine = this;
             activeState.enemy = GetComponent<Enemy>();
             activeState.gunEnemy = GetComponentInChildren<GunEnemy>();
+            activeState.SetGameObject(gameObject);
             activeState.Enter();
         }
     }
