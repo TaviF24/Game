@@ -42,21 +42,29 @@ public class CameraDetection : MonoBehaviour
         }
     }
 
-    bool IsPlayerDetected()
+public bool IsPlayerDetected()
+{
+    Vector3 directionPlayer = GameManager.instance.player.transform.position - transform.position;
+    float distToPlayer = directionPlayer.magnitude;
+    Debug.Log($"Distance to player: {distToPlayer}");
+    if (distToPlayer > max_dist)
     {
-        Vector3 directionPlayer = GameManager.instance.player.transform.position - transform.position;
-        float distToPlayer = directionPlayer.magnitude;
-        if (distToPlayer > max_dist)
-            return false;
-        if (Vector3.Angle(transform.forward, directionPlayer) > fov / 2f)
-            return false;
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, directionPlayer, out hit, max_dist))
-        
-            return hit.transform == GameManager.instance.player.transform;
-        
+        Debug.Log("Player is too far.");
         return false;
     }
+    if (Vector3.Angle(transform.forward, directionPlayer) > fov / 2f)
+    {
+        Debug.Log("Player is out of FOV.");
+        return false;
+    }
+    RaycastHit hit;
+    if (Physics.Raycast(transform.position, directionPlayer, out hit, max_dist))
+    {
+        return hit.transform.root == GameManager.instance.player.transform.root;
+    }
+    Debug.Log("Raycast did not hit the player.");
+    return false;
+}
 
     void HandleDetection()
     {

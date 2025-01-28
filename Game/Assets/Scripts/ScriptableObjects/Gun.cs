@@ -22,7 +22,7 @@ public class Gun : MonoBehaviour
     private bool isBlockedFromShooting = false;
 
     float timeSinceLastShot;
-    Camera camera;
+    new Camera camera;
     GameObject player;
     Vector3 shotDirection;
     Animator weaponAnimator;
