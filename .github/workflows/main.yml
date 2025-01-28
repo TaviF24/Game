@@ -25,7 +25,7 @@ jobs:
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
-          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          projectPath: Game
 
     
   build:
@@ -71,11 +71,3 @@ jobs:
         with:
           name: Build
           path: Game/build
-
-      - name: Publish Test Results
-        uses: dorny/test-reporter@v1
-        if: always() 
-        with:
-          name: Unit Tests
-          path: Game/test-results.xml
-          reporter: unity
