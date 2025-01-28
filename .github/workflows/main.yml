@@ -1,54 +1,42 @@
 name: Unity Build Check
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+on: [push, pull_request]
 
 jobs:
   build:
+    name: Build Unity Test
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
-        
-      - name: Cache Unity files
-        uses: actions/cache@v3
+        uses: actions/checkout@v4
         with:
-          path: ~/.cache/unity
-          key: ${{ runner.os }}-unity-${{ hashFiles('**/*') }}
+          lfs: true
+
+      - uses: actions/cache@v3
+        with:
+          path: Game/Library
+          key: Library-${{ hashFiles('Game/Assets/**', 'Game/Packages/**', 'Game/ProjectSettings/**') }}
           restore-keys: |
-            ${{ runner.os }}-unity-
-            
-      - name: Setup Unity
-        uses: game-ci/unity-builder@v2
-        with:
-          unityVersion: '2022.3.49f1' 
+            Library-
 
-      - name: Activate Unity license
-        uses: game-ci/unity-activate@v2.0.0
-        with:
-          unityEmail: ${{ secrets.UNITY_EMAIL }}
-          unityPassword: ${{ secrets.UNITY_PASSWORD }}
-          unitySerial: ${{ secrets.UNITY_SERIAL || ''}}
-
-      - name: Build Unity project
+      - name: Verify Unity Project Directory
         run: |
-          echo "Starting Unity build..."
-          /opt/unity/Editor/Unity \
-            -batchmode \
-            -nographics \
-            -projectPath . \
-            -quit \
-            -logFile /dev/stdout \
-            -buildTarget StandaloneWindows64
-        env:
-          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE || '' }}
+          if [ ! -f "Game/ProjectSettings/ProjectVersion.txt" ]; then
+            echo "Error: ProjectVersion.txt not found in Game/ProjectSettings/. Ensure the Unity project path is correctly set."
+            exit 1
+          fi
 
-      - name: Deactivate Unity license
-        if: always()
-        uses: game-ci/unity-return-license@v3
+      - name: Build project
+        uses: game-ci/unity-builder@v4.3.0
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          targetPlatform: WebGL
+          projectPath: Game 
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Build
+          path: Game/build
