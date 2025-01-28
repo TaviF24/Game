@@ -1,0 +1,54 @@
+name: Unity Build Check
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Cache Unity files
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/unity
+          key: ${{ runner.os }}-unity-${{ hashFiles('**/*') }}
+          restore-keys: |
+            ${{ runner.os }}-unity-
+            
+      - name: Setup Unity
+        uses: game-ci/unity-builder@v2
+        with:
+          unityVersion: '2022.3.49f1' 
+
+      - name: Activate Unity license
+        uses: game-ci/unity-activate@v2.0.0
+        with:
+          unityEmail: ${{ secrets.UNITY_EMAIL }}
+          unityPassword: ${{ secrets.UNITY_PASSWORD }}
+          unitySerial: ${{ secrets.UNITY_SERIAL || ''}}
+
+      - name: Build Unity project
+        run: |
+          echo "Starting Unity build..."
+          /opt/unity/Editor/Unity \
+            -batchmode \
+            -nographics \
+            -projectPath . \
+            -quit \
+            -logFile /dev/stdout \
+            -buildTarget StandaloneWindows64
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE || '' }}
+
+      - name: Deactivate Unity license
+        if: always()
+        uses: game-ci/unity-return-license@v3
