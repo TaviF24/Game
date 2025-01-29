@@ -6,7 +6,7 @@ using UnityEngine;
 public class GunData : ScriptableObject
 {
     [Header("Info")]
-    public string name;
+    public new string name;
 
     [Header("Shooting")]
     public float damage;

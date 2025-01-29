@@ -3,6 +3,31 @@ name: Unity Build Check
 on: [push, pull_request]
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - uses: actions/cache@v3
+        with:
+          path: Library
+          key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+          restore-keys: |
+            Library-
+
+      - name: Run tests
+        uses: game-ci/unity-test-runner@v4.3.1
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          projectPath: Game
+
+    
   build:
     name: Build Unity Test
     runs-on: ubuntu-latest
@@ -21,17 +46,23 @@ jobs:
 
       - name: Verify Unity Project Directory
         run: |
-          if [ ! -f "Game/ProjectSettings/ProjectVersion.txt" ]; then
+          if [! -f "Game/ProjectSettings/ProjectVersion.txt" ]; then
             echo "Error: ProjectVersion.txt not found in Game/ProjectSettings/. Ensure the Unity project path is correctly set."
             exit 1
           fi
 
-      - name: Build project
+      - name: Install Blender
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y blender
+
+      - name: Build project and run tests
         uses: game-ci/unity-builder@v4.3.0
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+          BLENDER_PATH: $(which blender) 
         with:
           targetPlatform: WebGL
           projectPath: Game 
