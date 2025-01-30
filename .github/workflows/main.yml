@@ -1,6 +1,6 @@
 name: Unity Build Check
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   test:
@@ -67,7 +67,7 @@ jobs:
           targetPlatform: WebGL
           projectPath: Game 
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: Build
           path: Game/build
