@@ -19,6 +19,7 @@ public class CameraDetection : MonoBehaviour
     {
         if (DetectionManager.instance.concealment >= 100 || DetectionManager.instance.alreadyDetected)
             return;
+            
 
         if (IsPlayerDetected())
         {

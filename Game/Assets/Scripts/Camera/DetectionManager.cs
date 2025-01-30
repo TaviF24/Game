@@ -153,7 +153,7 @@ public class DetectionManager : MonoBehaviour, IDataPersistence
         }
     }
 
-    private IEnumerator ClearDetectedText()
+    public IEnumerator ClearDetectedText()
     {
         yield return new WaitForSeconds(3);
         if (concealmentHUDText != null)

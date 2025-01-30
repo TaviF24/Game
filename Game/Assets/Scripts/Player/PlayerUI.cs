@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using static Codice.Client.BaseCommands.Import.Commit;
 
 public class PlayerUI : MonoBehaviour
 {
@@ -9,12 +10,18 @@ public class PlayerUI : MonoBehaviour
 	private TextMeshProUGUI promptText;
     public GameObject assaultHUD, anticipationHUD;
     public GameObject finishScreen;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
+    private void Update()
+    {
+        if (DetectionManager.instance.concealment >= 100 || DetectionManager.instance.alreadyDetected)
+        {
+            if (DetectionManager.instance.concealmentHUDText != null)
+            {
+                StartCoroutine(DetectionManager.instance.ClearDetectedText());
+            }
+            return;
+        }
+    }
     public void ActivateAssaultHUD(bool value)
     {
         assaultHUD.SetActive(value);
