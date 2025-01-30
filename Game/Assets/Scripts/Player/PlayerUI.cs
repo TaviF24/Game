@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using static Codice.Client.BaseCommands.Import.Commit;
 
 public class PlayerUI : MonoBehaviour
 {
